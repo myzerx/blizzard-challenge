@@ -15,7 +15,7 @@ export const LoginHeader = styled('header', {
   flexDirection: 'column',
   minHeight: '100%',
   position: 'relative',
-  gap: '24px',
+
   alignItems: 'center',
   justifyContent: 'center',
 })
@@ -25,6 +25,7 @@ export const TitleText = styled('text', {
   fontSize: '32px',
   fontWeight: 'bold',
   padding: '10px',
+  margin: '40px 0 40px 0',
 })
 
 export const GridBoxes = styled('div', {
@@ -32,7 +33,12 @@ export const GridBoxes = styled('div', {
   flexFlow: 'row',
   justifyContent: 'center',
   alignItems: 'center',
+
   gap: '24px',
+})
+
+export const LineText = styled('div', {
+  margin: '40px 0 24px 0',
 })
 
 export const InputContainer = styled('div', {
@@ -49,6 +55,7 @@ export const InputLogin = styled('input', {
   color: 'Grey',
   fontWeight: 'bold',
   fontSize: '14px',
+  margin: '15px 0 0 0',
 })
 
 export const ButtonLogin = styled('button', {
@@ -58,6 +65,7 @@ export const ButtonLogin = styled('button', {
   border: '0.5px  none',
   borderRadius: '0.2rem',
   backgroundColor: '#0074e0',
+  margin: '50px 0 0 0',
 
   '&:hover': {
     boxShadow: 'inset 0 0 0 1.5px #6ab7ff',

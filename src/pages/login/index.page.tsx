@@ -12,6 +12,7 @@ import {
   GridBoxes,
   TextAccountContainer,
   TextAccount,
+  LineText,
 } from './login.styles'
 
 import logoBattleNet from '../../assets/logo-horizontal-color-light.1z1fI.svg'
@@ -37,7 +38,9 @@ export default function Login() {
           <LoginBoxes data={{ displayColor: 'red', displayIcon: 'nintend' }} />
         </GridBoxes>
 
-        <span> Ou se conecte-se com </span>
+        <LineText>
+          <span> Ou se conecte-se com </span>
+        </LineText>
 
         <InputContainer>
           <InputLogin placeholder="Email ou telefone" />
