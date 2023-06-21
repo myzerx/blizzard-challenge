@@ -1,7 +1,10 @@
-export default function Home() {
-  return (
-    <>
-      <h1> Blizzard </h1>
-    </>
-  )
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
+
+export default function Redirect() {
+  const router = useRouter()
+
+  useEffect(() => {
+    router.push('/login')
+  })
 }
