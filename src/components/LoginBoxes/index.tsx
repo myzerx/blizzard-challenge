@@ -1,16 +1,12 @@
+import { ReactNode } from 'react'
 import { BoxContainer } from './styles'
 
 interface LoginBoxesProps {
-  data: {
-    displayColor: string
-    displayIcon: string
-  }
+  displayColor: string
+  icon: ReactNode
 }
-
-export function LoginBoxes({ data }: LoginBoxesProps) {
+export function LoginBoxes({ displayColor, icon }: LoginBoxesProps) {
   return (
-    <BoxContainer css={{ backgroundColor: data.displayColor }}>
-      {data.displayIcon}
-    </BoxContainer>
+    <BoxContainer css={{ backgroundColor: displayColor }}>{icon}</BoxContainer>
   )
 }

@@ -7,8 +7,8 @@ export const { styled, globalCss, theme, getCssText, keyframes } =
         white: '#fff',
         black: '#000',
 
-        'blue-400': '#1877F2',
-        'blue-600': '#00439C',
+        'blue-300': '#1877F2',
+        'blue-400': '#0070cc',
 
         'green-700': '#0a4f0a',
       },

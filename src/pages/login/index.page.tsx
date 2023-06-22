@@ -1,5 +1,13 @@
-import { LoginBoxes } from '@/components/LoginBoxes'
 import Image from 'next/image'
+import logoBattleNet from '../../assets/logo-horizontal-color-light.1z1fI.svg'
+import {
+  IoLogoFacebook,
+  IoLogoGoogle,
+  IoLogoApple,
+  IoLogoPlaystation,
+  IoLogoXbox,
+} from 'react-icons/io'
+
 import {
   LoginContainer,
   LoginHeader,
@@ -13,9 +21,10 @@ import {
   TextAccountContainer,
   TextAccount,
   LineText,
+  SeparatorLineText,
+  LineConnectText,
 } from './login.styles'
-
-import logoBattleNet from '../../assets/logo-horizontal-color-light.1z1fI.svg'
+import { LoginBoxes } from '@/components/LoginBoxes'
 
 export default function Login() {
   return (
@@ -28,18 +37,30 @@ export default function Login() {
         <TitleText> Conectar-se </TitleText>
 
         <GridBoxes>
-          <LoginBoxes data={{ displayColor: '$blue-400', displayIcon: 'fb' }} />
-          <LoginBoxes data={{ displayColor: '$white', displayIcon: 'gcp' }} />
-          <LoginBoxes data={{ displayColor: '$white', displayIcon: 'apple' }} />
-          <LoginBoxes data={{ displayColor: '$blue-600', displayIcon: 'ps' }} />
           <LoginBoxes
-            data={{ displayColor: '$green-700', displayIcon: 'xb' }}
+            displayColor="$blue-300"
+            icon={<IoLogoFacebook size={20} />}
           />
-          <LoginBoxes data={{ displayColor: 'red', displayIcon: 'nintend' }} />
+          <LoginBoxes displayColor="$white" icon={<IoLogoGoogle size={20} />} />
+          <LoginBoxes
+            displayColor="$white"
+            icon={<IoLogoApple size={24} color="black" />}
+          />
+          <LoginBoxes
+            displayColor="$blue-400"
+            icon={<IoLogoPlaystation size={20} />}
+          />
+          <LoginBoxes
+            displayColor="$green-700"
+            icon={<IoLogoXbox size={20} />}
+          />
+          <LoginBoxes displayColor="red" icon="" />
         </GridBoxes>
 
         <LineText>
-          <span> Ou se conecte-se com </span>
+          <SeparatorLineText />
+          <LineConnectText> Ou conecte-se com </LineConnectText>
+          <SeparatorLineText />
         </LineText>
 
         <InputContainer>

@@ -4,10 +4,12 @@ export const LoginContainer = styled('div', {
   display: 'flex',
   height: 'calc(100vh - 100px)',
   justifyContent: 'center',
+  padding: '10px',
 })
 
 export const ImageContainer = styled('div', {
   display: 'flex',
+  paddingBottom: '5px',
 })
 
 export const LoginHeader = styled('header', {
@@ -22,10 +24,10 @@ export const LoginHeader = styled('header', {
 
 export const TitleText = styled('text', {
   color: '$white',
-  fontSize: '32px',
-  fontWeight: 'bold',
-  padding: '10px',
-  margin: '40px 0 40px 0',
+  fontSize: '36px',
+  fontWeight: '700',
+  fontFamily: 'sans-serif',
+  margin: '40px 0 35px 0',
 })
 
 export const GridBoxes = styled('div', {
@@ -38,7 +40,26 @@ export const GridBoxes = styled('div', {
 })
 
 export const LineText = styled('div', {
-  margin: '40px 0 24px 0',
+  margin: '40px 0 18px 0',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  gap: '18px',
+})
+
+export const SeparatorLineText = styled('div', {
+  borderTop: '0.4px solid $white',
+  opacity: '0.15',
+  width: '128px',
+  height: '0.1px',
+  margin: '5px 0 0 0',
+})
+
+export const LineConnectText = styled('span', {
+  color: '#FFFFFF99',
+  fontWeight: 'bold',
+  fontSize: '14px',
+  fontFamily: '$sans',
 })
 
 export const InputContainer = styled('div', {
@@ -47,7 +68,7 @@ export const InputContainer = styled('div', {
 
 export const InputLogin = styled('input', {
   width: '25.25rem',
-  height: '2.5rem',
+  height: '2.4rem',
   paddingLeft: '0.8rem',
   border: '0.5px solid grey',
   borderRadius: '0.2rem',
@@ -55,7 +76,7 @@ export const InputLogin = styled('input', {
   color: 'Grey',
   fontWeight: 'bold',
   fontSize: '14px',
-  margin: '15px 0 0 0',
+  margin: '18px 0 0 0',
 })
 
 export const ButtonLogin = styled('button', {
@@ -65,10 +86,11 @@ export const ButtonLogin = styled('button', {
   border: '0.5px  none',
   borderRadius: '0.2rem',
   backgroundColor: '#0074e0',
-  margin: '50px 0 0 0',
+  margin: '40px 0 20px 0',
 
   '&:hover': {
     boxShadow: 'inset 0 0 0 1.5px #6ab7ff',
+    cursor: 'pointer',
     transition: 'all 0.4s',
   },
 })
@@ -85,7 +107,7 @@ export const TextAccountContainer = styled('div', {
   alignItems: 'center',
   flexDirection: 'column',
   padding: '2rem',
-  gap: '1.2rem',
+  gap: '1.4rem',
 })
 
 export const TextAccount = styled('text', {

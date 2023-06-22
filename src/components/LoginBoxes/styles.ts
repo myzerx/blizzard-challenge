@@ -10,4 +10,10 @@ export const BoxContainer = styled('div', {
   alignItems: 'center',
   justifyContent: 'center',
   gap: '10px',
+
+  '&:hover': {
+    cursor: 'pointer',
+    opacity: '0.7',
+    transition: 'all 0.4s',
+  },
 })
