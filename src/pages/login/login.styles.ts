@@ -77,6 +77,18 @@ export const InputLogin = styled('input', {
   fontWeight: 'bold',
   fontSize: '14px',
   margin: '18px 0 0 0',
+
+  '&:hover': {
+    border: '0.5px solid $white',
+  },
+
+  '&:focus': {
+    outline: '1px solid #0074e0',
+    '&:hover': {
+      border: '0.5px solid #6ab7ff',
+      transition: 'all 0.4s',
+    },
+  },
 })
 
 export const ButtonLogin = styled('button', {
@@ -111,7 +123,14 @@ export const TextAccountContainer = styled('div', {
 })
 
 export const TextAccount = styled('text', {
-  color: '$blue-400',
+  color: '#0074e0',
   fontWeight: 'bold',
   fontSize: '1.1rem',
+  '&:hover': {
+    color: '#6ab7ff',
+    cursor: 'pointer',
+    transition: 'all 0.4s',
+    textDecoration: 'underline',
+    textUnderlineOffset: '4px',
+  },
 })

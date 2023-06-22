@@ -25,8 +25,14 @@ import {
   LineConnectText,
 } from './login.styles'
 import { LoginBoxes } from '@/components/LoginBoxes'
+import { useRouter } from 'next/router'
 
 export default function Login() {
+  const router = useRouter()
+
+  const handleClick = () => {
+    router.push('/index')
+  }
   return (
     <LoginContainer>
       <LoginHeader>
@@ -71,7 +77,7 @@ export default function Login() {
         </InputContainer>
 
         <ButtonLogin>
-          <ButtonText> Conectar-se </ButtonText>
+          <ButtonText onClick={handleClick}> Conectar-se </ButtonText>
         </ButtonLogin>
 
         <TextAccountContainer>
