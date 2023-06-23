@@ -1,3 +1,18 @@
+import {
+  ApplicationLayoutContainer,
+  ApplicationLayoutHead,
+  ApplicationLayoutHeader,
+  ApplicationLayoutHeaderContent,
+} from './login.styles'
+
 export default function Index() {
-  return <h1>Header</h1>
+  return (
+    <ApplicationLayoutContainer>
+      <ApplicationLayoutHead>
+        <ApplicationLayoutHeader>
+          <ApplicationLayoutHeaderContent>Logo</ApplicationLayoutHeaderContent>
+        </ApplicationLayoutHeader>
+      </ApplicationLayoutHead>
+    </ApplicationLayoutContainer>
+  )
 }

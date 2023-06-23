@@ -1,4 +1,5 @@
 import { styled } from '@/styles/stitches.config'
+import { Eye, EyeSlash } from '@phosphor-icons/react'
 
 export const LoginContainer = styled('div', {
   display: 'flex',
@@ -63,7 +64,7 @@ export const LineConnectText = styled('span', {
 })
 
 export const InputContainer = styled('div', {
-  display: 'flex',
+  position: 'relative',
 })
 
 export const InputLogin = styled('input', {
@@ -73,22 +74,46 @@ export const InputLogin = styled('input', {
   border: '0.5px solid grey',
   borderRadius: '0.2rem',
   background: '#171920',
-  color: 'Grey',
-  fontWeight: 'bold',
-  fontSize: '14px',
+  color: '$white',
+
+  fontSize: '16px',
   margin: '18px 0 0 0',
 
   '&:hover': {
     border: '0.5px solid $white',
   },
 
+  transition: 'all 0.4s',
   '&:focus': {
     outline: '1px solid #0074e0',
     '&:hover': {
       border: '0.5px solid #6ab7ff',
-      transition: 'all 0.4s',
     },
   },
+  '&::placeholder': {
+    color: 'gray',
+  },
+})
+
+export const EyeIcon = styled(Eye, {
+  position: 'absolute',
+  top: '65%',
+  right: '15px',
+  transform: 'translateY(-50%)',
+  cursor: 'pointer',
+
+  color: '#148eff',
+  fontWeight: 'bold,',
+})
+
+export const EyeSlashIcon = styled(EyeSlash, {
+  position: 'absolute',
+  top: '65%',
+  right: '15px',
+  transform: 'translateY(-50%)',
+  cursor: 'pointer',
+
+  color: '#148eff',
 })
 
 export const ButtonLogin = styled('button', {
@@ -100,10 +125,10 @@ export const ButtonLogin = styled('button', {
   backgroundColor: '#0074e0',
   margin: '40px 0 20px 0',
 
+  transition: 'all 0.4s',
   '&:hover': {
     boxShadow: 'inset 0 0 0 1.5px #6ab7ff',
     cursor: 'pointer',
-    transition: 'all 0.4s',
   },
 })
 
@@ -126,10 +151,11 @@ export const TextAccount = styled('text', {
   color: '#0074e0',
   fontWeight: 'bold',
   fontSize: '1.1rem',
+  transition: 'all 0.4s',
   '&:hover': {
     color: '#6ab7ff',
     cursor: 'pointer',
-    transition: 'all 0.4s',
+
     textDecoration: 'underline',
     textUnderlineOffset: '4px',
   },

@@ -1,13 +1,18 @@
+/* react/next imports */
+import { useRouter } from 'next/router'
 import Image from 'next/image'
-import logoBattleNet from '../../assets/logo-horizontal-color-light.1z1fI.svg'
-import {
-  IoLogoFacebook,
-  IoLogoGoogle,
-  IoLogoApple,
-  IoLogoPlaystation,
-  IoLogoXbox,
-} from 'react-icons/io'
+import { useState } from 'react'
 
+/* logos section */
+import logoBattleNet from '../../assets/logo-horizontal-color-light.1z1fI.svg'
+import facebooklogo from '../../assets/thirdPartyIcons/icons8-facebook.svg'
+import googlelogo from '../../assets/thirdPartyIcons/icons8-google-20.svg'
+import applelogo from '../../assets/thirdPartyIcons/icons8-apple.svg'
+import playstationlogo from '../../assets/thirdPartyIcons/icons8-playstation.svg'
+import xboxlogo from '../../assets/thirdPartyIcons/icons8-xbox.svg'
+import nintendologo from '../../assets/thirdPartyIcons/nintendo-switch.svg'
+
+/* components imports */
 import {
   LoginContainer,
   LoginHeader,
@@ -23,16 +28,25 @@ import {
   LineText,
   SeparatorLineText,
   LineConnectText,
+  EyeIcon,
+  EyeSlashIcon,
 } from './login.styles'
-import { LoginBoxes } from '@/components/LoginBoxes'
-import { useRouter } from 'next/router'
+
+import { ThirdPartyPlatformLogin } from '@/components/ThirdPartyPlatform/login'
+import { ThirdPartyPlatformIcons } from '@/components/ThirdPartyPlatform/icons'
 
 export default function Login() {
   const router = useRouter()
+  const [passwordVisible, setPasswordVisible] = useState(false)
 
   const handleClick = () => {
     router.push('/index')
   }
+
+  const togglePasswordVisibility = () => {
+    setPasswordVisible((prevValue) => !prevValue)
+  }
+
   return (
     <LoginContainer>
       <LoginHeader>
@@ -43,24 +57,31 @@ export default function Login() {
         <TitleText> Conectar-se </TitleText>
 
         <GridBoxes>
-          <LoginBoxes
+          <ThirdPartyPlatformLogin
             displayColor="$blue-300"
-            icon={<IoLogoFacebook size={20} />}
+            icon={<ThirdPartyPlatformIcons icon={facebooklogo} />}
           />
-          <LoginBoxes displayColor="$white" icon={<IoLogoGoogle size={20} />} />
-          <LoginBoxes
+          <ThirdPartyPlatformLogin
             displayColor="$white"
-            icon={<IoLogoApple size={24} color="black" />}
+            icon={<ThirdPartyPlatformIcons icon={googlelogo} />}
           />
-          <LoginBoxes
+          <ThirdPartyPlatformLogin
+            displayColor="$white"
+            icon={<ThirdPartyPlatformIcons icon={applelogo} />}
+          />
+          <ThirdPartyPlatformLogin
             displayColor="$blue-400"
-            icon={<IoLogoPlaystation size={20} />}
+            icon={<ThirdPartyPlatformIcons icon={playstationlogo} />}
           />
-          <LoginBoxes
+          <ThirdPartyPlatformLogin
             displayColor="$green-700"
-            icon={<IoLogoXbox size={20} />}
+            icon={<ThirdPartyPlatformIcons icon={xboxlogo} />}
           />
-          <LoginBoxes displayColor="red" icon="" />
+
+          <ThirdPartyPlatformLogin
+            displayColor="$red"
+            icon={<ThirdPartyPlatformIcons icon={nintendologo} />}
+          />
         </GridBoxes>
 
         <LineText>
@@ -73,11 +94,19 @@ export default function Login() {
           <InputLogin placeholder="Email ou telefone" />
         </InputContainer>
         <InputContainer>
-          <InputLogin placeholder="Senha" />
+          <InputLogin
+            type={passwordVisible ? 'text' : 'password'}
+            placeholder="Senha"
+          />
+          {passwordVisible ? (
+            <EyeSlashIcon size={18} onClick={togglePasswordVisibility} />
+          ) : (
+            <EyeIcon size={18} onClick={togglePasswordVisibility} />
+          )}
         </InputContainer>
 
-        <ButtonLogin>
-          <ButtonText onClick={handleClick}> Conectar-se </ButtonText>
+        <ButtonLogin onClick={handleClick}>
+          <ButtonText> Conectar-se </ButtonText>
         </ButtonLogin>
 
         <TextAccountContainer>
