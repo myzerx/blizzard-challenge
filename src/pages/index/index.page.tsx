@@ -1,18 +1,11 @@
-import {
-  ApplicationLayoutContainer,
-  ApplicationLayoutHead,
-  ApplicationLayoutHeader,
-  ApplicationLayoutHeaderContent,
-} from './login.styles'
+import Content from '@/components/content'
+import Header from '@/components/header'
 
 export default function Index() {
   return (
-    <ApplicationLayoutContainer>
-      <ApplicationLayoutHead>
-        <ApplicationLayoutHeader>
-          <ApplicationLayoutHeaderContent>Logo</ApplicationLayoutHeaderContent>
-        </ApplicationLayoutHeader>
-      </ApplicationLayoutHead>
-    </ApplicationLayoutContainer>
+    <div>
+      <Header />
+      <Content />
+    </div>
   )
 }
