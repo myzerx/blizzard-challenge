@@ -38,6 +38,15 @@ export const GridBoxes = styled('div', {
   alignItems: 'center',
 
   gap: '24px',
+
+  '@media (max-width: 575px)': {
+    flexWrap: 'wrap',
+    width: '365px',
+
+    '& > *': {
+      flexBasis: 'calc(23% - 30px)',
+    },
+  },
 })
 
 export const LineText = styled('div', {
@@ -54,6 +63,9 @@ export const SeparatorLineText = styled('div', {
   width: '128px',
   height: '0.1px',
   margin: '5px 0 0 0',
+  '@media (max-width: 575px)': {
+    width: '95px',
+  },
 })
 
 export const LineConnectText = styled('span', {
@@ -93,6 +105,10 @@ export const InputLogin = styled('input', {
   '&::placeholder': {
     color: 'gray',
   },
+
+  '@media (max-width: 575px)': {
+    width: '330px',
+  },
 })
 
 export const EyeIcon = styled(Eye, {
@@ -129,6 +145,10 @@ export const ButtonLogin = styled('button', {
   '&:hover': {
     boxShadow: 'inset 0 0 0 1.5px #6ab7ff',
     cursor: 'pointer',
+  },
+
+  '@media (max-width: 575px)': {
+    width: '345px',
   },
 })
 
