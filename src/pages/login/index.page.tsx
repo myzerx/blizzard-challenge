@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 
 /* logos section */
-import logoBattleNet from '../../assets/logo-horizontal-color-light.1z1fI.svg'
+import logoBattleNet from '../../../public/logo-horizontal-color-light.1z1fI.svg'
 import facebooklogo from '../../assets/thirdPartyIcons/icons8-facebook.svg'
 import googlelogo from '../../assets/thirdPartyIcons/icons8-google-20.svg'
 import applelogo from '../../assets/thirdPartyIcons/icons8-apple.svg'

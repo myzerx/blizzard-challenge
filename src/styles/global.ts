@@ -13,5 +13,9 @@ export const globalStyles = globalCss({
     fontFamily: '$sans',
   },
 
-  'body, input, texstarea, button': { fontWeight: '400', fontSize: '1rem' },
+  'body, input, texstarea, button': {
+    fontWeight: '400',
+    fontSize: '1rem',
+    color: '$white',
+  },
 })

@@ -1,4 +1,25 @@
 import { styled } from '@stitches/react'
+const imagePath = '/banner-hero/games/diablo-bg.png'
+
+export const BackgroundContainer = styled('div', {
+  position: 'relative',
+  width: '100%',
+  height: '100%',
+})
+
+export const BackgroundImage = styled('div', {
+  position: 'fixed',
+  top: -50,
+  left: 0,
+  width: '100%',
+  height: '125%',
+
+  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.35),rgba(0, 0, 0, 0.35)) ,url(${imagePath})`,
+  fillOpacity: '0.8',
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
+  zIndex: -1,
+})
 
 export const HeaderContainer = styled('div', {
   display: 'flex',
@@ -9,7 +30,6 @@ export const HeaderContainer = styled('div', {
 
 export const HeaderHeader = styled('header', {
   height: '94px',
-  width: '100%',
 
   border: '1px solid transparent',
   borderBottomColor: '$white',
