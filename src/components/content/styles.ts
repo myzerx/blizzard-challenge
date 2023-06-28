@@ -18,9 +18,9 @@ export const HeaderContent = styled('div', {
   margin: '0 auto',
 
   display: 'flex',
-  alignItems: 'center',
-
   columnGap: '8rem',
+  alignItems: 'center',
+  justifyContent: 'space-between',
 })
 
 export const HeaderTilesGrid = styled('div', {
@@ -39,10 +39,11 @@ export const HeaderTilesTextContainer = styled('div', {
 
 export const HeaderTilesTitleText = styled('text', {
   display: 'flex',
-  fontSize: '3rem',
+  fontSize: '4rem',
+  fontFamily: 'poppins',
   fontWeight: 'bold',
   lineHeight: '110%',
-  width: '375px',
+  width: '550px',
 })
 
 export const HeaderTilesSubTitleText = styled('text', {
@@ -53,4 +54,15 @@ export const HeaderTilesSubTitleText = styled('text', {
 export const ButtonContainer = styled('div', {
   display: 'flex',
   padding: '20px 0 0 0',
+})
+
+export const TrailerContainer = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+})
+
+export const LogoContainer = styled('div', {
+  display: 'flex',
+  padding: '0 0 140px 0',
 })
