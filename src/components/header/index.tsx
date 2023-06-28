@@ -1,14 +1,12 @@
 import Image from 'next/image'
 import logoBlizzard from '../../../public/logo-blizzard.png'
+import { Button } from '../Buttons/Button'
 
 import {
   HeaderContainer,
   HeaderHeader,
   HeaderContent,
   HeaderTabs,
-  ButtonCreateAccount,
-  ButtonLogin,
-  ButtonText,
   ButtonContainer,
   BackgroundContainer,
   BackgroundImage,
@@ -29,13 +27,14 @@ export default function Header() {
               <span>Noticias</span>
               <span>Suporte</span>
             </HeaderTabs>
+
             <ButtonContainer>
-              <ButtonCreateAccount>
-                <ButtonText>Criar conta</ButtonText>
-              </ButtonCreateAccount>
-              <ButtonLogin>
-                <ButtonText>Logar</ButtonText>
-              </ButtonLogin>
+              <Button size={'small'} variant={'outline'}>
+                Criar Conta
+              </Button>
+              <Button size={'small'} variant={'primary'}>
+                Logar
+              </Button>
             </ButtonContainer>
           </HeaderContent>
         </HeaderHeader>

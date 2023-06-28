@@ -9,6 +9,7 @@ export const { styled, globalCss, theme, getCssText, keyframes } =
 
         'blue-300': '#1877F2',
         'blue-400': '#0070cc',
+        'blue-500': '#00AEFF',
 
         'green-700': '#107c10',
 

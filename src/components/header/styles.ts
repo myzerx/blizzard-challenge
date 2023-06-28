@@ -64,29 +64,3 @@ export const ButtonContainer = styled('div', {
   flexDirection: 'row',
   gap: '1rem',
 })
-
-export const ButtonCreateAccount = styled('button', {
-  display: 'flex',
-  justifyContent: 'center',
-  background: 'transparent',
-  alignItems: 'center',
-  width: '112px',
-  height: '40px',
-  border: '1px solid $white',
-  borderRadius: '4px',
-})
-
-export const ButtonLogin = styled('button', {
-  display: 'flex',
-  justifyContent: 'center',
-  background: '#00AEFF',
-  alignItems: 'center',
-  width: '112px',
-  height: '40px',
-  border: '1px solid transparent',
-  borderRadius: '4px',
-})
-
-export const ButtonText = styled('text', {
-  color: '$white',
-})

@@ -54,16 +54,3 @@ export const ButtonContainer = styled('div', {
   display: 'flex',
   padding: '20px 0 0 0',
 })
-
-export const ButtonPlayNow = styled('button', {
-  width: '168px',
-  height: '52px',
-  background: '#00AEFF',
-  alignItems: 'center',
-  border: '1px solid transparent',
-  borderRadius: '4px',
-})
-
-export const ButtonText = styled('text', {
-  fontWeight: 'bold',
-})

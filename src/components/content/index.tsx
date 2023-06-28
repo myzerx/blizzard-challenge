@@ -1,3 +1,4 @@
+import { Button } from '../Buttons/Button'
 import {
   ContentContainer,
   ContentHeader,
@@ -6,8 +7,6 @@ import {
   HeaderTilesTextContainer,
   HeaderTilesTitleText,
   HeaderTilesSubTitleText,
-  ButtonPlayNow,
-  ButtonText,
   ButtonContainer,
 } from './styles'
 
@@ -31,9 +30,9 @@ export default function Content() {
               O retorno de Lilith traz uma era de escuridão e sofrimento
             </HeaderTilesSubTitleText>
             <ButtonContainer>
-              <ButtonPlayNow>
-                <ButtonText> Jogue agora </ButtonText>
-              </ButtonPlayNow>
+              <Button weight={'bold'} size={'medium'}>
+                Jogue agora
+              </Button>
             </ButtonContainer>
           </HeaderTilesTextContainer>
         </HeaderContent>
