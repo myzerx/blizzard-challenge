@@ -9,8 +9,10 @@ import {
   HeaderTilesTitleText,
   HeaderTilesSubTitleText,
   ButtonContainer,
-  TrailerContainer,
+  ContainerLogoTrailer,
   LogoContainer,
+  ContainerTrailer,
+  GifContainer,
 } from './styles'
 
 import diablo4Icon from '../../../public/banner-hero/icons/game-1.png'
@@ -46,15 +48,15 @@ export default function Content() {
               </Button>
             </ButtonContainer>
           </HeaderTilesTextContainer>
-          <TrailerContainer>
+          <ContainerLogoTrailer>
             <LogoContainer>
               <Image src={diablo4Logo} alt="" />
             </LogoContainer>
-            <div>
+            <ContainerTrailer>
               Assista o Trailer
-              <div>Trailer</div>
-            </div>
-          </TrailerContainer>
+              <GifContainer />
+            </ContainerTrailer>
+          </ContainerLogoTrailer>
         </HeaderContent>
       </ContentHeader>
     </ContentContainer>

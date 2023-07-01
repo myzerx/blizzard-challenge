@@ -17,6 +17,7 @@ export const BackgroundImage = styled('div', {
   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.35),rgba(0, 0, 0, 0.35)) ,url(${imagePath})`,
   fillOpacity: '0.8',
   backgroundRepeat: 'no-repeat',
+
   backgroundSize: 'cover',
   zIndex: -1,
 })

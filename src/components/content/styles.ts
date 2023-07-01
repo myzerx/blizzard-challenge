@@ -1,4 +1,5 @@
 import { styled } from '@stitches/react'
+const imagePath = '/banner-hero/games/diablo-animation.gif'
 
 export const ContentContainer = styled('div', {
   display: 'flex',
@@ -56,7 +57,7 @@ export const ButtonContainer = styled('div', {
   padding: '20px 0 0 0',
 })
 
-export const TrailerContainer = styled('div', {
+export const ContainerLogoTrailer = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
@@ -65,4 +66,21 @@ export const TrailerContainer = styled('div', {
 export const LogoContainer = styled('div', {
   display: 'flex',
   padding: '0 0 140px 0',
+})
+
+export const ContainerTrailer = styled('div', {
+  display: 'flex',
+  alignItems: 'flex-end',
+  flexDirection: 'column',
+  gap: '1rem',
+  marginBottom: '-100px',
+})
+
+export const GifContainer = styled('div', {
+  display: 'flex',
+  width: '280px',
+  height: '158px',
+
+  backgroundImage: `url(${imagePath})`,
+  backgroundSize: 'cover',
 })
