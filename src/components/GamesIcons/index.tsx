@@ -1,7 +1,7 @@
 import { ContainerIcons, ContainerGrid, Icon } from './styles'
 
 import { useDispatch, useSelector } from 'react-redux'
-import { setSelectedId } from '../../reducers/store'
+import { setSelectedId } from '../../redux/store'
 
 export default function GamesIcons() {
   const icons = [
@@ -33,7 +33,7 @@ export default function GamesIcons() {
   ]
 
   const dispatch = useDispatch()
-  const selectedId = useSelector((state) => state.selectedId)
+  const selectedId = useSelector((state: any) => state.selectedId)
 
   const handleIconClick = (iconId: any) => {
     dispatch(setSelectedId(iconId))

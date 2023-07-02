@@ -14,7 +14,8 @@ import {
 } from './styles'
 
 export default function Header() {
-  const selectedId = useSelector((state) => state.selectedId)
+  const selectedId = useSelector((state: any) => state.selectedId)
+
   const backgroundById = [
     {
       id: 1,
