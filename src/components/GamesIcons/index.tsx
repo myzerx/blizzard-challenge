@@ -47,7 +47,7 @@ export default function GamesIcons() {
             key={icon.id}
             src={icon.src}
             alt={icon.name}
-            isSelected={selectedId === icon.id} // Pass isSelected prop based on comparison
+            isSelected={selectedId === icon.id}
             onClick={() => handleIconClick(icon.id)}
           />
         ))}

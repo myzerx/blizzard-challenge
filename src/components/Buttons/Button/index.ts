@@ -17,6 +17,7 @@ export const Button = styled('button', {
 
   '&:hover': {
     transform: 'scale(1.01)',
+    cursor: 'pointer',
   },
 
   variants: {

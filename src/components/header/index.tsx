@@ -3,6 +3,8 @@ import logoBlizzard from '../../../public/logo-blizzard.png'
 import { Button } from '../Buttons/Button'
 import { useSelector } from 'react-redux'
 
+import { useRouter } from 'next/router'
+
 import {
   HeaderContainer,
   HeaderHeader,
@@ -14,7 +16,12 @@ import {
 } from './styles'
 
 export default function Header() {
+  const router = useRouter()
   const selectedId = useSelector((state: any) => state.selectedId)
+
+  const handleClickLogin = () => {
+    router.push('/login')
+  }
 
   const backgroundById = [
     {
@@ -60,12 +67,15 @@ export default function Header() {
               <span>Noticias</span>
               <span>Suporte</span>
             </HeaderTabs>
-
             <ButtonContainer>
               <Button size={'small'} variant={'outline'}>
                 Criar Conta
               </Button>
-              <Button size={'small'} variant={'primary'}>
+              <Button
+                size={'small'}
+                variant={'primary'}
+                onClick={handleClickLogin}
+              >
                 Logar
               </Button>
             </ButtonContainer>
