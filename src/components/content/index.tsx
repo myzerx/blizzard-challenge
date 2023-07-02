@@ -11,6 +11,7 @@ import {
   ButtonContainer,
   ContainerLogoTrailer,
   LogoContainer,
+  TrailerText,
   ContainerTrailer,
   GifContainer,
 } from './styles'
@@ -40,7 +41,7 @@ export default function Content() {
             <Image src={diablo4Logo} alt="" />
           </LogoContainer>
           <ContainerTrailer>
-            Assista o Trailer
+            <TrailerText> ASSISTA O TRAILER</TrailerText>
             <GifContainer />
           </ContainerTrailer>
         </ContainerLogoTrailer>

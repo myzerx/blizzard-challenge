@@ -9,3 +9,20 @@ export const ContainerGrid = styled('div', {
   gridTemplateColumns: 'colums',
   gap: '1.5rem',
 })
+
+export const Icon = styled('img', {
+  variants: {
+    isSelected: {
+      true: {
+        filter: 'none',
+      },
+      false: {
+        filter: 'grayscale(100%)',
+      },
+    },
+  },
+
+  '&:hover': {
+    cursor: 'pointer',
+  },
+})

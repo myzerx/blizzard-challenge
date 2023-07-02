@@ -27,13 +27,14 @@ export const HeaderTilesTextContainer = styled('div', {
 export const HeaderTilesTitleText = styled('text', {
   fontSize: '4rem',
   fontFamily: 'poppins',
-  fontWeight: 'bold',
+  fontWeight: '700',
   lineHeight: '110%',
   width: '550px',
 })
 
 export const HeaderTilesSubTitleText = styled('text', {
   fontSize: '18px',
+  fontWeight: '400',
 })
 
 export const ButtonContainer = styled('div', {
@@ -50,6 +51,12 @@ export const ContainerLogoTrailer = styled('div', {
 
 export const LogoContainer = styled('div', {
   display: 'flex',
+})
+
+export const TrailerText = styled('text', {
+  fontFamily: 'poppins',
+  fontSize: '13px',
+  fontWeight: '600',
 })
 
 export const ContainerTrailer = styled('div', {

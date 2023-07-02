@@ -10,11 +10,11 @@ export const globalStyles = globalCss({
     '-webkit-font-smoothing': 'antialiased',
     background: '#15171E',
     color: '$white',
-    fontFamily: '$sans',
+    fontFamily: 'poppins',
+    fontWeight: '400',
   },
 
   'body, input, texstarea, button': {
-    fontWeight: '400',
     fontSize: '1rem',
     color: '$white',
   },
