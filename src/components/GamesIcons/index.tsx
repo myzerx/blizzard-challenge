@@ -1,5 +1,7 @@
 import { ContainerIcons, ContainerGrid, Icon } from './styles'
-import { useState } from 'react'
+
+import { useDispatch, useSelector } from 'react-redux'
+import { setSelectedId } from '../../reducers/store'
 
 export default function GamesIcons() {
   const icons = [
@@ -30,10 +32,11 @@ export default function GamesIcons() {
     },
   ]
 
-  const [selectedIcon, setSelectedIcon] = useState(1)
+  const dispatch = useDispatch()
+  const selectedId = useSelector((state) => state.selectedId)
 
   const handleIconClick = (iconId: any) => {
-    setSelectedIcon(iconId)
+    dispatch(setSelectedId(iconId))
   }
 
   return (
@@ -44,7 +47,7 @@ export default function GamesIcons() {
             key={icon.id}
             src={icon.src}
             alt={icon.name}
-            isSelected={selectedIcon === icon.id}
+            isSelected={selectedId === icon.id} // Pass isSelected prop based on comparison
             onClick={() => handleIconClick(icon.id)}
           />
         ))}

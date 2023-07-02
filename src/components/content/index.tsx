@@ -1,5 +1,6 @@
 import { Button } from '../Buttons/Button'
 import Image from 'next/image'
+
 import GamesIcons from '../GamesIcons'
 
 import {

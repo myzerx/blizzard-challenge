@@ -1,5 +1,4 @@
 import { styled } from '@stitches/react'
-const imagePath = '/banner-hero/games/diablo-bg.png'
 
 export const BackgroundContainer = styled('div', {
   position: 'relative',
@@ -14,7 +13,6 @@ export const BackgroundImage = styled('div', {
   width: '100%',
   height: '125%',
 
-  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.35),rgba(0, 0, 0, 0.35)) ,url(${imagePath})`,
   fillOpacity: '0.8',
   backgroundRepeat: 'no-repeat',
 
