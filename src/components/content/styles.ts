@@ -23,11 +23,11 @@ export const HeaderTilesTextContainer = styled('div', {
 })
 
 export const HeaderTilesTitleText = styled('text', {
-  fontSize: '4rem',
+  fontSize: '4em',
   fontFamily: 'poppins',
   fontWeight: '700',
   lineHeight: '110%',
-  width: '650px',
+  width: '610px',
 })
 
 export const HeaderTilesSubTitleText = styled('text', {

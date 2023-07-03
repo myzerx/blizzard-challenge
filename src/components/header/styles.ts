@@ -8,16 +8,17 @@ export const BackgroundContainer = styled('div', {
 
 export const BackgroundImage = styled('div', {
   position: 'fixed',
-  top: -50,
+  top: 0,
   left: 0,
   width: '100%',
-  height: '125%',
-
-  fillOpacity: '0.8',
+  height: '100%',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
   backgroundRepeat: 'no-repeat',
-
   backgroundSize: 'cover',
   zIndex: -1,
+  transition: '.15s',
 })
 
 export const HeaderContainer = styled('div', {

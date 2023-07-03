@@ -44,7 +44,7 @@ export const Button = styled('button', {
     },
     variant: {
       primary: {
-        background: '$blue-500',
+        background: '$blue-200',
       },
       outline: {
         background: 'transparent',

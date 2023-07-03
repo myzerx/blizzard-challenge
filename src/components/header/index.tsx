@@ -27,15 +27,11 @@ export default function Header() {
 
   const selectedBackground = GamesData.find((game) => game.id === selectedId)
 
-  const backgroundImage = selectedBackground
-    ? selectedBackground.images.banner
-    : ''
-
   return (
     <BackgroundContainer>
       <BackgroundImage
         css={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.35),rgba(0, 0, 0, 0.35)) , url(${backgroundImage})`,
+          backgroundImage: `url(${selectedBackground?.images.banner})`,
         }}
       />
       <HeaderContainer>

@@ -182,7 +182,7 @@ export const TextAccount = styled('text', {
   fontSize: '1.1rem',
   transition: 'all 0.4s',
   '&:hover': {
-    color: '$blue-100',
+    color: '$blue-300',
     cursor: 'pointer',
 
     textDecoration: 'underline',

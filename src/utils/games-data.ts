@@ -70,7 +70,7 @@ export const GamesData = [
       gif: '/banner-hero/games/starcraft-animation.gif',
     },
     texts: {
-      title: 'Declare guerra pela galáxia no controle de três raças singulares',
+      title: 'Declare guerra pela galáxia com Starcraft II',
       subtitle: 'Conquiste a galáxia como Terrano, Zerg ou Protoss.',
     },
   },

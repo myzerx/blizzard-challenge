@@ -24,6 +24,8 @@ export default function Content() {
 
   const selectedGame = GamesData.find((game) => game.id === selectedId)
 
+  const selectedLogo = selectedGame?.images.logo || ''
+
   return (
     <ContentContainer>
       <HeaderContent>
@@ -43,18 +45,13 @@ export default function Content() {
         </HeaderTilesTextContainer>
         <ContainerLogoTrailer>
           <LogoContainer>
-            <Image
-              src={selectedGame?.images.logo}
-              alt=""
-              width={280}
-              height={154}
-            />
+            <Image src={selectedLogo} alt="" width={280} height={154} />
           </LogoContainer>
           <ContainerTrailer>
             <TrailerText> ASSISTA O TRAILER</TrailerText>
             <GifContainer
               css={{
-                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.35),rgba(0, 0, 0, 0.35)) , url(${selectedGame?.images.gif})`,
+                backgroundImage: `url(${selectedGame?.images.gif})`,
               }}
             />
           </ContainerTrailer>
