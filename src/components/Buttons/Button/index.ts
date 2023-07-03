@@ -5,7 +5,7 @@ export const Button = styled('button', {
   alignItems: 'center',
   justifyContent: 'center',
 
-  columnGap: '0.875rem',
+  gap: '0.5rem',
 
   color: '$white',
 
@@ -35,6 +35,9 @@ export const Button = styled('button', {
       },
     },
     weight: {
+      normal: {
+        fontWeight: '500',
+      },
       bold: {
         fontWeight: '600',
       },

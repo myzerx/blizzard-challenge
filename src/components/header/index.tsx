@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import logoBlizzard from '../../../public/logo-blizzard.png'
+import { GamesData } from '@/utils/games-data'
+import { User } from '@phosphor-icons/react'
 import { Button } from '../Buttons/Button'
 import { useSelector } from 'react-redux'
 
@@ -23,30 +25,10 @@ export default function Header() {
     router.push('/login')
   }
 
-  const backgroundById = [
-    {
-      id: 1,
-      name: 'diablo4Icon',
-      backgroundSrc: '/banner-hero/games/diablo-bg.png',
-    },
-    {
-      id: 2,
-      name: 'hearthstoneIcon',
-      backgroundSrc: '/banner-hero/games/hearthstone-bg.png',
-    },
-    {
-      id: 3,
-      name: 'wowIcon',
-      backgroundSrc: '/banner-hero/games/wow-bg.png',
-    },
-  ]
-
-  const selectedBackground = backgroundById.find(
-    (item) => item.id === selectedId,
-  )
+  const selectedBackground = GamesData.find((game) => game.id === selectedId)
 
   const backgroundImage = selectedBackground
-    ? selectedBackground.backgroundSrc
+    ? selectedBackground.images.banner
     : ''
 
   return (
@@ -75,7 +57,9 @@ export default function Header() {
                 size={'small'}
                 variant={'primary'}
                 onClick={handleClickLogin}
+                weight={'normal'}
               >
+                <User size={20} weight={'bold'} />
                 Logar
               </Button>
             </ButtonContainer>

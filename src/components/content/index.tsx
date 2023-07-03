@@ -1,6 +1,8 @@
 import { Button } from '../Buttons/Button'
 import Image from 'next/image'
 
+import { GamesData } from '@/utils/games-data'
+import { useSelector } from 'react-redux'
 import GamesIcons from '../GamesIcons'
 
 import {
@@ -17,19 +19,21 @@ import {
   GifContainer,
 } from './styles'
 
-import diablo4Logo from '../../../public/banner-hero/games/diablo-logo.png'
-
 export default function Content() {
+  const selectedId = useSelector((state: any) => state.selectedId)
+
+  const selectedGame = GamesData.find((game) => game.id === selectedId)
+
   return (
     <ContentContainer>
       <HeaderContent>
         <GamesIcons />
         <HeaderTilesTextContainer>
           <HeaderTilesTitleText>
-            Retorne à escuridão com o game Diablo IV
+            {selectedGame?.texts.title}
           </HeaderTilesTitleText>
           <HeaderTilesSubTitleText>
-            O retorno de Lilith traz uma era de escuridão e sofrimento
+            {selectedGame?.texts.subtitle}
           </HeaderTilesSubTitleText>
           <ButtonContainer>
             <Button weight={'bold'} size={'medium'}>
@@ -39,11 +43,20 @@ export default function Content() {
         </HeaderTilesTextContainer>
         <ContainerLogoTrailer>
           <LogoContainer>
-            <Image src={diablo4Logo} alt="" />
+            <Image
+              src={selectedGame?.images.logo}
+              alt=""
+              width={280}
+              height={154}
+            />
           </LogoContainer>
           <ContainerTrailer>
             <TrailerText> ASSISTA O TRAILER</TrailerText>
-            <GifContainer />
+            <GifContainer
+              css={{
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.35),rgba(0, 0, 0, 0.35)) , url(${selectedGame?.images.gif})`,
+              }}
+            />
           </ContainerTrailer>
         </ContainerLogoTrailer>
       </HeaderContent>

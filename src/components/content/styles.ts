@@ -1,7 +1,5 @@
 import { styled } from '@stitches/react'
 
-const imagePath = '/banner-hero/games/diablo-animation.gif'
-
 export const ContentContainer = styled('div', {
   display: 'flex',
   justifyContent: 'center',
@@ -29,7 +27,7 @@ export const HeaderTilesTitleText = styled('text', {
   fontFamily: 'poppins',
   fontWeight: '700',
   lineHeight: '110%',
-  width: '550px',
+  width: '650px',
 })
 
 export const HeaderTilesSubTitleText = styled('text', {
@@ -69,6 +67,6 @@ export const ContainerTrailer = styled('div', {
 export const GifContainer = styled('div', {
   width: '280px',
   height: '158px',
-  backgroundImage: `url(${imagePath})`,
+
   backgroundSize: 'cover',
 })
