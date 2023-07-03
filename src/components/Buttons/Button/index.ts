@@ -5,8 +5,8 @@ export const Button = styled('button', {
   alignItems: 'center',
   justifyContent: 'center',
 
+  height: '3.375rem',
   gap: '0.5rem',
-
   color: '$white',
 
   borderRadius: '0.25rem',
@@ -27,11 +27,10 @@ export const Button = styled('button', {
         height: '2.575rem',
       },
       medium: {
-        width: '10.5rem',
-        height: '3.375rem',
+        width: '12.5rem',
       },
       full: {
-        width: '100%',
+        width: '60%',
       },
     },
     weight: {

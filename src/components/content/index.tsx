@@ -1,6 +1,6 @@
 import { Button } from '../Buttons/Button'
 import Image from 'next/image'
-
+import { User } from '@phosphor-icons/react'
 import { GamesData } from '@/utils/games-data'
 import { useSelector } from 'react-redux'
 import GamesIcons from '../GamesIcons'
@@ -38,9 +38,16 @@ export default function Content() {
             {selectedGame?.texts.subtitle}
           </HeaderTilesSubTitleText>
           <ButtonContainer>
-            <Button weight={'bold'} size={'medium'}>
-              Jogue agora
-            </Button>
+            {selectedGame?.released ? (
+              <Button weight={'bold'} size={'medium'}>
+                Jogue agora
+              </Button>
+            ) : (
+              <Button weight={'bold'} size={'full'}>
+                <User size={20} weight={'bold'} />
+                Reserve agora na pré-venda
+              </Button>
+            )}
           </ButtonContainer>
         </HeaderTilesTextContainer>
         <ContainerLogoTrailer>
