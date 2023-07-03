@@ -40,7 +40,7 @@ export default function Login() {
   const [passwordVisible, setPasswordVisible] = useState(false)
 
   const handleClick = () => {
-    router.push('/index')
+    router.push('/')
   }
 
   const togglePasswordVisibility = () => {
@@ -58,26 +58,25 @@ export default function Login() {
 
         <GridBoxes>
           <ThirdPartyPlatformLogin
-            displayColor="$blue-300"
-            icon={<ThirdPartyPlatformIcons icon={facebooklogo} />}
-          />
-          <ThirdPartyPlatformLogin
             displayColor="$white"
             icon={<ThirdPartyPlatformIcons icon={googlelogo} />}
+          />
+          <ThirdPartyPlatformLogin
+            displayColor="$blue-500"
+            icon={<ThirdPartyPlatformIcons icon={facebooklogo} />}
           />
           <ThirdPartyPlatformLogin
             displayColor="$white"
             icon={<ThirdPartyPlatformIcons icon={applelogo} />}
           />
           <ThirdPartyPlatformLogin
-            displayColor="$blue-400"
-            icon={<ThirdPartyPlatformIcons icon={playstationlogo} />}
-          />
-          <ThirdPartyPlatformLogin
             displayColor="$green-700"
             icon={<ThirdPartyPlatformIcons icon={xboxlogo} />}
           />
-
+          <ThirdPartyPlatformLogin
+            displayColor="$blue-400"
+            icon={<ThirdPartyPlatformIcons icon={playstationlogo} />}
+          />
           <ThirdPartyPlatformLogin
             displayColor="$red"
             icon={<ThirdPartyPlatformIcons icon={nintendologo} />}

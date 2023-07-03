@@ -5,12 +5,13 @@ export const LoginContainer = styled('div', {
   display: 'flex',
   height: 'calc(100vh - 100px)',
   justifyContent: 'center',
-  padding: '10px',
+  padding: '0.625rem',
+  overflow: 'hidden',
 })
 
 export const ImageContainer = styled('div', {
   display: 'flex',
-  paddingBottom: '5px',
+  paddingBottom: '-.25rem',
 })
 
 export const LoginHeader = styled('header', {
@@ -25,10 +26,10 @@ export const LoginHeader = styled('header', {
 
 export const TitleText = styled('text', {
   color: '$white',
-  fontSize: '36px',
-  fontWeight: '700',
-  fontFamily: 'sans-serif',
-  margin: '40px 0 35px 0',
+  fontSize: '2rem',
+  fontWeight: '600',
+  fontFamily: 'poppins',
+  margin: '2.5rem 0 2.1875rem 0',
 })
 
 export const GridBoxes = styled('div', {
@@ -37,7 +38,7 @@ export const GridBoxes = styled('div', {
   justifyContent: 'center',
   alignItems: 'center',
 
-  gap: '24px',
+  gap: '1.5rem',
 
   '@media (max-width: 575px)': {
     flexWrap: 'wrap',
@@ -50,11 +51,11 @@ export const GridBoxes = styled('div', {
 })
 
 export const LineText = styled('div', {
-  margin: '40px 0 18px 0',
+  margin: '2.5rem 0 1.125rem 0',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  gap: '18px',
+  gap: '1.125rem',
 })
 
 export const SeparatorLineText = styled('div', {
@@ -62,16 +63,16 @@ export const SeparatorLineText = styled('div', {
   opacity: '0.15',
   width: '128px',
   height: '0.1px',
-  margin: '5px 0 0 0',
+  margin: '0.3125rem 0 0 0',
   '@media (max-width: 575px)': {
     width: '95px',
   },
 })
 
 export const LineConnectText = styled('span', {
-  color: '#FFFFFF99',
+  color: '$gray-100',
   fontWeight: 'bold',
-  fontSize: '14px',
+  fontSize: '0.875rem',
   fontFamily: '$sans',
 })
 
@@ -88,8 +89,8 @@ export const InputLogin = styled('input', {
   background: '#171920',
   color: '$white',
 
-  fontSize: '16px',
-  margin: '18px 0 0 0',
+  fontSize: '1rem',
+  margin: '1.125rem 0 0 0',
 
   '&:hover': {
     border: '0.5px solid $white',
@@ -97,9 +98,9 @@ export const InputLogin = styled('input', {
 
   transition: 'all 0.4s',
   '&:focus': {
-    outline: '1px solid #0074e0',
+    outline: '1px solid $blue-400',
     '&:hover': {
-      border: '0.5px solid #6ab7ff',
+      border: '0.5px solid $blue-100',
     },
   },
   '&::placeholder': {
@@ -114,11 +115,11 @@ export const InputLogin = styled('input', {
 export const EyeIcon = styled(Eye, {
   position: 'absolute',
   top: '65%',
-  right: '15px',
+  right: '0.9375rem',
   transform: 'translateY(-50%)',
   cursor: 'pointer',
 
-  color: '#148eff',
+  color: '$blue-100',
   fontWeight: 'bold,',
 })
 
@@ -129,26 +130,34 @@ export const EyeSlashIcon = styled(EyeSlash, {
   transform: 'translateY(-50%)',
   cursor: 'pointer',
 
-  color: '#148eff',
+  color: '$blue-100',
 })
 
 export const ButtonLogin = styled('button', {
-  width: '420px',
-  height: '40px',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+
+  padding: '0.5rem 1rem',
+
+  width: '100%',
+  height: '100%',
+
+  maxHeight: '2.5rem',
 
   border: '0.5px  none',
   borderRadius: '0.2rem',
-  backgroundColor: '#0074e0',
-  margin: '40px 0 20px 0',
+  backgroundColor: '$blue-400',
+  margin: '2.5rem 0 1.25rem 0',
 
   transition: 'all 0.4s',
   '&:hover': {
-    boxShadow: 'inset 0 0 0 1.5px #6ab7ff',
+    boxShadow: 'inset 0 0 0 1.5px $blue-100',
     cursor: 'pointer',
   },
 
   '@media (max-width: 575px)': {
-    width: '345px',
+    width: '21.5rem',
   },
 })
 
@@ -168,12 +177,12 @@ export const TextAccountContainer = styled('div', {
 })
 
 export const TextAccount = styled('text', {
-  color: '#0074e0',
+  color: '$blue-400',
   fontWeight: 'bold',
   fontSize: '1.1rem',
   transition: 'all 0.4s',
   '&:hover': {
-    color: '#6ab7ff',
+    color: '$blue-100',
     cursor: 'pointer',
 
     textDecoration: 'underline',
