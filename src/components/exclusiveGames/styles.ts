@@ -30,4 +30,20 @@ export const ExclusiveGamesIcons = styled('div', {
 export const ExclusiveGridIcons = styled('div', {
   display: 'flex',
   gap: '1rem',
+  width: '15%',
+})
+
+export const ExclusiveGamesAllGamesText = styled('span', {
+  display: 'flex',
+  alignItems: 'center',
+  whiteSpace: 'nowrap',
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
+})
+
+export const ExclusiveGridGames = styled('div', {
+  paddingTop: '4rem',
+  display: 'grid',
+  gridTemplateColumns: 'repeat(4, 1fr)',
+  gap: '1.5rem',
 })
