@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 
 export function useGameData() {
-  const [gameData, setGameData] = useState(null)
+  const [gameData, setGameData] = useState<any[]>([])
 
   useEffect(() => {
     async function fetchData() {
@@ -13,8 +13,8 @@ export function useGameData() {
 
         setGameData(response.data)
       } catch (error) {
-        console.error('Error fetching game data:', error)
-        setGameData(null)
+        console.error('Error fetching api game data:', error)
+        setGameData([])
       }
     }
 

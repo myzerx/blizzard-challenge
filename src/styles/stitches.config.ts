@@ -8,7 +8,9 @@ export const { styled, globalCss, theme, getCssText, keyframes } =
         black: '#000',
 
         'gray-100': '#FFFFFF99',
+        'gray-300': '#8F9199',
 
+        'blue-000': '#61CDFF',
         'blue-100': '#6ab7ff',
         'blue-200': '#00AEFF',
         'blue-300': '#148eff',
