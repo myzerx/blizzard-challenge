@@ -1,7 +1,6 @@
 import { styled } from '@stitches/react'
 
 export const ExclusiveGamesContainer = styled('div', {
-  display: 'flex',
   minHeight: '100vh',
   background: '$black',
   height: '1850px',

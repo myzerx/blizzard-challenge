@@ -31,11 +31,13 @@ import groupBoxes from '../../../public/groupBoxes.svg'
 import Image from 'next/image'
 
 import { useGameData } from '../CustomHooks/useFetch/fetchGameData'
+import { ProgressBar } from '../ProgressBar'
 
 export default function ExclusiveGames() {
   const gameData = useGameData()
   return (
     <ExclusiveGamesContainer>
+      <ProgressBar />
       <ExclusiveGamesHeader>
         <ExclusiveGamesContent>
           <ExclusiveGamesFlexText>
