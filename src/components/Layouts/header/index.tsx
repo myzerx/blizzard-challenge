@@ -15,6 +15,8 @@ import {
   ButtonContainer,
   BackgroundContainer,
   BackgroundImage,
+  LogoBar,
+  HeaderContainerLogoBar,
 } from './styles'
 
 export default function Header() {
@@ -37,7 +39,11 @@ export default function Header() {
       <HeaderContainer>
         <HeaderHeader>
           <HeaderContent>
-            <Image src={logoBlizzard} alt="Blizzard Logo" />
+            <HeaderContainerLogoBar>
+              <Image src={logoBlizzard} alt="Blizzard Logo" />
+              <LogoBar />
+            </HeaderContainerLogoBar>
+
             <HeaderTabs>
               <span>Jogos</span>
               <span>Esportes</span>
