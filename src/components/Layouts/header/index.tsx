@@ -1,8 +1,8 @@
 import Image from 'next/image'
-import logoBlizzard from '../../../public/logo-blizzard.png'
+import logoBlizzard from '../../../../public/logo-blizzard.png'
 import { GamesData } from '@/utils/games-data'
 import { User } from '@phosphor-icons/react'
-import { Button } from '../Buttons/Button'
+import { Button } from '../../Buttons/Button'
 import { useSelector } from 'react-redux'
 
 import { useRouter } from 'next/router'

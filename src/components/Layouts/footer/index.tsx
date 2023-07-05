@@ -1,4 +1,4 @@
-import { Button } from '../Buttons/Button'
+import { Button } from '../../Buttons/Button'
 import {
   FooterContainer,
   FooterContent,
@@ -16,16 +16,16 @@ import {
 } from './style'
 
 import Image from 'next/image'
-import logoBattleNet from '../../../public/logo-battle-net.png'
-import appImage from '../../../public/ilustrations/app.png'
-import appImageMini from '../../../public/ilustrations/app-mini.png'
+import logoBattleNet from '../../../../public/logo-battle-net.png'
+import appImage from '../../../../public/ilustrations/app.png'
+import appImageMini from '../../../../public/ilustrations/app-mini.png'
 
-import dotsWrapper from '../../../public/dots-wrapper.svg'
-import buyIcon from '../../../public/buyIcon.svg'
-import filesIcon from '../../../public/filesIcon.svg'
-import cellphoneIcon from '../../../public/cellphoneIcon.svg'
+import dotsWrapper from '../../../../public/dots-wrapper.svg'
+import buyIcon from '../../../../public/buyIcon.svg'
+import filesIcon from '../../../../public/filesIcon.svg'
+import cellphoneIcon from '../../../../public/cellphoneIcon.svg'
 
-import applelogo from '../../assets/thirdPartyIcons/icons8-apple.svg'
+import applelogo from '../../../assets/thirdPartyIcons/icons8-apple.svg'
 
 export default function Footer() {
   return (

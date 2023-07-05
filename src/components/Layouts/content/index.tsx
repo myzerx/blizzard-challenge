@@ -1,9 +1,9 @@
-import { Button } from '../Buttons/Button'
+import { Button } from '../../Buttons/Button'
 import Image from 'next/image'
 import { User } from '@phosphor-icons/react'
 import { GamesData } from '@/utils/games-data'
 import { useSelector } from 'react-redux'
-import GamesIcons from '../GamesIcons'
+import GamesIcons from '../../GamesIcons'
 
 import {
   ContentContainer,
