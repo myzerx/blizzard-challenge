@@ -43,7 +43,8 @@ export const LogoBar = styled('div', {
 export const HeaderHeader = styled('header', {
   height: '94px',
   border: '1px solid transparent',
-  borderBottomColor: '$white',
+
+  borderBottomColor: '$white-opacity-10',
 })
 
 export const HeaderContent = styled('div', {
