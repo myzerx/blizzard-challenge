@@ -18,6 +18,7 @@ import {
   LogoBar,
   HeaderContainerLogoBar,
 } from './styles'
+import Dropdown from '@/components/Dropdown'
 
 export default function Header() {
   const router = useRouter()
@@ -45,7 +46,7 @@ export default function Header() {
             </HeaderContainerLogoBar>
 
             <HeaderTabs>
-              <span>Jogos</span>
+              <Dropdown />
               <span>Esportes</span>
               <span>Loja</span>
               <span>Noticias</span>

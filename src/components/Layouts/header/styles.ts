@@ -1,7 +1,6 @@
 import { styled } from '@stitches/react'
 
 export const BackgroundContainer = styled('div', {
-  position: 'relative',
   width: '100%',
   height: '100%',
 })
@@ -25,6 +24,8 @@ export const HeaderContainer = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   width: '100%',
+  zIndex: 999999,
+  position: 'relative',
 })
 
 export const HeaderContainerLogoBar = styled('div', {
@@ -69,4 +70,6 @@ export const ButtonContainer = styled('div', {
   display: 'flex',
   flexDirection: 'row',
   gap: '1rem',
+  zIndex: 999999,
+  position: 'relative',
 })
