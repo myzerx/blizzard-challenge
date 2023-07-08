@@ -15,9 +15,11 @@ export const Icon = styled('img', {
     isSelected: {
       true: {
         filter: 'none',
+        transition: '.50s',
       },
       false: {
         filter: 'grayscale(100%)',
+        transition: '.50s',
       },
     },
   },
