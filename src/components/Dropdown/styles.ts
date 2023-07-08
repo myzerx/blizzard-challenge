@@ -1,18 +1,20 @@
-import { styled } from '@stitches/react'
+import { keyframes, styled } from '@stitches/react'
 
 export const DropdownContainer = styled('div', {})
 
-export const DropdownSpan = styled('span', {
-  display: 'flex',
-  position: 'relative',
-
-  zIndex: 1,
-  cursor: 'pointer',
+const slideIn = keyframes({
+  from: { transform: 'translateY(-100%)' },
+  to: { transform: 'translateY(0)' },
 })
+
+// const slideOut = keyframes({
+//   from: { transform: 'translateY(0)' },
+//   to: { transform: 'translateY(-100%)' },
+// })
 
 export const DropdownMenuBackground = styled('div', {
   position: 'absolute',
-
+  zIndex: 9998,
   background:
     'linear-gradient(180deg, #020203 0%, rgba(14, 17, 23, 0.92) 96.35%);',
   backdropFilter: 'blur(6px)',
@@ -23,6 +25,8 @@ export const DropdownMenuBackground = styled('div', {
   width: '100%',
   height: '640px',
   overflow: ' hidden',
+
+  animation: `${slideIn} 0.35s`,
 })
 
 export const DropdownMenu = styled('div', {

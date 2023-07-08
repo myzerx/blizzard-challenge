@@ -24,8 +24,6 @@ export const HeaderContainer = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   width: '100%',
-  zIndex: 999999,
-  position: 'relative',
 })
 
 export const HeaderContainerLogoBar = styled('div', {
@@ -46,6 +44,7 @@ export const HeaderHeader = styled('header', {
   border: '1px solid transparent',
 
   borderBottomColor: '$white-opacity-10',
+  zIndex: 9999,
 })
 
 export const HeaderContent = styled('div', {
@@ -66,10 +65,30 @@ export const HeaderTabs = styled('nav', {
   flex: 1,
 })
 
+export const HeaderNavsContainer = styled('span', {
+  display: 'flex',
+  alignItems: 'center',
+  gap: '0.5rem',
+  cursor: 'pointer',
+})
+
+export const HeaderNavsIcon = styled('div', {
+  display: 'flex',
+  transition: '.15s',
+
+  color: '$gray-100',
+  variants: {
+    active: {
+      true: {
+        color: '$blue-200',
+        transform: 'rotate(180deg)',
+      },
+    },
+  },
+})
+
 export const ButtonContainer = styled('div', {
   display: 'flex',
   flexDirection: 'row',
   gap: '1rem',
-  zIndex: 999999,
-  position: 'relative',
 })
