@@ -75,3 +75,128 @@ export const GamesData = [
     },
   },
 ]
+
+export const GamesDropdownIcons = [
+  {
+    id: 1,
+    name: 'Diablo® II ressurected',
+    images: {
+      icon: '/menu/gamesdropdown-icons/diablo-2-icon.png',
+    },
+  },
+  {
+    id: 2,
+    name: 'Overwatch® 2',
+    images: {
+      icon: '/menu/gamesdropdown-icons/overwatch-2-icon.png',
+    },
+  },
+  {
+    id: 3,
+    name: 'World of Warcraft®',
+    images: {
+      icon: '/menu/gamesdropdown-icons/wow-icon.png',
+    },
+  },
+  {
+    id: 4,
+    name: 'Hearthstone®',
+    images: {
+      icon: '/menu/gamesdropdown-icons/hearthstone-icon.png',
+    },
+  },
+  {
+    id: 5,
+    name: 'Heroes of the storm®',
+    images: {
+      icon: '/menu/gamesdropdown-icons/hots-icon.png',
+    },
+  },
+  {
+    id: 6,
+    name: 'Warcraft® III Reforged',
+    images: {
+      icon: '/menu/gamesdropdown-icons/warcraft-reforged-3-icon.png',
+    },
+  },
+  {
+    id: 7,
+    name: 'Diablo® IV',
+    images: {
+      icon: '/menu/gamesdropdown-icons/diablo-4-icon.png',
+    },
+  },
+  {
+    id: 8,
+    name: 'Diablo® Immortal',
+    images: {
+      icon: '/menu/gamesdropdown-icons/diablo-immortal-icon.png',
+    },
+  },
+  {
+    id: 9,
+    name: 'Diablo® III',
+    images: {
+      icon: '/menu/gamesdropdown-icons/diablo-3-icon.png',
+    },
+  },
+  {
+    id: 10,
+    name: 'StarCraft® II',
+    images: {
+      icon: '/menu/gamesdropdown-icons/starcraft-2-icon.png',
+    },
+  },
+  {
+    id: 11,
+    name: 'StarCraft® Remastered',
+    images: {
+      icon: '/menu/gamesdropdown-icons/starcraft-remastered-icon.png',
+    },
+  },
+  {
+    id: 12,
+    name: 'Arcade da Blizzard®',
+    images: {
+      icon: '/menu/gamesdropdown-icons/blizzard-arcade-icon.png',
+    },
+  },
+]
+
+export const SportsDropdownIcons = [
+  {
+    id: 1,
+    name: 'Hearthstone® masters',
+    images: {
+      icon: '/menu/sportsdropdown-icons/hearthstone-masters-icon.png',
+    },
+  },
+  {
+    id: 2,
+    name: 'Campeonato Mundial de Arena WoW®',
+    images: {
+      icon: '/menu/sportsdropdown-icons/arena-wow-icon.png',
+    },
+  },
+  {
+    id: 3,
+    name: 'StarCraft® II WCS',
+    images: {
+      icon: '/menu/sportsdropdown-icons/starcraft-2-icon.png',
+    },
+  },
+  {
+    id: 4,
+    name: 'Copa Mundial de Overwatch®',
+    images: {
+      icon: '/menu/sportsdropdown-icons/overwatch-cup-icon.png',
+    },
+  },
+  {
+    id: 5,
+    name: 'Liga de Overwatch®',
+    images: {
+      icon: '/menu/sportsdropdown-icons/overwatch-league-icon.png',
+    },
+  },
+]

@@ -30,14 +30,8 @@ export const DropdownMenuBackground = styled('div', {
 })
 
 export const DropdownMenu = styled('div', {
-  display: 'grid',
-  gridTemplateColumns: 'repeat(5, 1fr)',
   margin: '0 auto',
   width: '1200px',
-  gap: '2rem',
-  padding: '150px 0 0 0',
-
-  columnGap: '2.8rem',
 })
 
 export const DropdownItem = styled('div', {
@@ -67,11 +61,4 @@ export const DropdownFooter = styled('div', {
 
 export const DropdownFooterItems = styled('div', {
   display: 'flex',
-  gap: '5rem',
-})
-
-export const DropdownFooterItemsIcons = styled('div', {
-  display: 'flex',
-  alignItems: 'center',
-  gap: '1rem',
 })

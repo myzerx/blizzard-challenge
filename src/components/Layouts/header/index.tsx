@@ -20,13 +20,16 @@ import {
   HeaderNavsContainer,
   HeaderNavsIcon,
 } from './styles'
-import Dropdown from '@/components/Dropdown'
+import Dropdown, { DropdownMenuLink } from '@/components/Dropdown'
 import { ReactNode, useState } from 'react'
+import GamesDropdown from '@/components/Dropdown/GamesDropdown'
+import SportsDropdown from '@/components/Dropdown/SportsDropdown'
 
 export interface NavbarOption {
   name: string
   dropdown?: {
     content: ReactNode
+    links: DropdownMenuLink[]
   }
 }
 
@@ -34,13 +37,32 @@ const HeaderNavOptions: NavbarOption[] = [
   {
     name: 'Jogos',
     dropdown: {
-      content: '',
+      content: <GamesDropdown />,
+      links: [
+        {
+          icon: 'Icon',
+          label: 'Ver todos os jogos',
+        },
+        {
+          icon: 'Icon',
+          label: 'Aplicativo Battle.net',
+        },
+        {
+          icon: 'Icon',
+          label: 'Downloads',
+        },
+        {
+          icon: 'Icon',
+          label: 'Fóruns dos jogos',
+        },
+      ],
     },
   },
   {
     name: 'Esportes',
     dropdown: {
-      content: '',
+      content: <SportsDropdown />,
+      links: [{ icon: 'Icon', label: 'Torneios da comunidade' }],
     },
   },
   {

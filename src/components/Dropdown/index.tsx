@@ -4,13 +4,18 @@ import {
   DropdownFooter,
   DropdownMenu,
   DropdownFooterItems,
-  DropdownFooterItemsIcons,
 } from './styles'
 import { NavbarOption } from '../Layouts/header'
+import { ReactNode } from 'react'
 
 export interface DropdownMenuProps {
   opened: NavbarOption | null
   setOpened: (opened: NavbarOption | null) => void
+}
+
+export interface DropdownMenuLink {
+  icon: ReactNode
+  label: string
 }
 
 export default function Dropdown({ opened, setOpened }: DropdownMenuProps) {
@@ -18,14 +23,14 @@ export default function Dropdown({ opened, setOpened }: DropdownMenuProps) {
     <DropdownContainer>
       {opened && (
         <DropdownMenuBackground>
-          <DropdownMenu> teste </DropdownMenu>
+          <DropdownMenu> {opened?.dropdown!.content} </DropdownMenu>
           <DropdownFooter>
-            <DropdownFooterItems>
-              <DropdownFooterItemsIcons>
-                <img src="" alt="icon" />
-                <span> Ver todos os jogos</span>
-              </DropdownFooterItemsIcons>
-            </DropdownFooterItems>
+            {opened?.dropdown?.links.map((link, index) => (
+              <DropdownFooterItems key={`link-${index}`}>
+                <span> {link.icon}</span>
+                <span> {link.label} </span>
+              </DropdownFooterItems>
+            ))}
           </DropdownFooter>
         </DropdownMenuBackground>
       )}
