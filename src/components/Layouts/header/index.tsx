@@ -24,6 +24,8 @@ import Dropdown, { DropdownMenuLink } from '@/components/Dropdown'
 import { ReactNode, useState } from 'react'
 import GamesDropdown from '@/components/Dropdown/GamesDropdown'
 import SportsDropdown from '@/components/Dropdown/SportsDropdown'
+import { ThirdPartyPlatformIcons } from '@/components/ThirdPartyPlatform/icons'
+import battleNet from '../../../../public/battlenet-mini-icon.svg'
 
 export interface NavbarOption {
   name: string
@@ -40,19 +42,19 @@ const HeaderNavOptions: NavbarOption[] = [
       content: <GamesDropdown />,
       links: [
         {
-          icon: 'Icon',
+          icon: <ThirdPartyPlatformIcons icon={battleNet} />,
           label: 'Ver todos os jogos',
         },
         {
-          icon: 'Icon',
+          icon: <ThirdPartyPlatformIcons icon={battleNet} />,
           label: 'Aplicativo Battle.net',
         },
         {
-          icon: 'Icon',
+          icon: <ThirdPartyPlatformIcons icon={battleNet} />,
           label: 'Downloads',
         },
         {
-          icon: 'Icon',
+          icon: <ThirdPartyPlatformIcons icon={battleNet} />,
           label: 'Fóruns dos jogos',
         },
       ],
@@ -62,7 +64,12 @@ const HeaderNavOptions: NavbarOption[] = [
     name: 'Esportes',
     dropdown: {
       content: <SportsDropdown />,
-      links: [{ icon: 'Icon', label: 'Torneios da comunidade' }],
+      links: [
+        {
+          icon: <ThirdPartyPlatformIcons icon={battleNet} />,
+          label: 'Torneios da comunidade',
+        },
+      ],
     },
   },
   {

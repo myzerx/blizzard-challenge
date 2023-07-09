@@ -11,7 +11,7 @@ export const SportsGrid = styled('div', {
 
   columnGap: '1.5rem',
   alignItems: 'baseline',
-  padding: '5.6875rem 0 0 0',
+  padding: '3.6875rem 0 0 0',
 })
 
 export const IconsImage = styled('img', {

@@ -23,7 +23,7 @@ export const DropdownMenuBackground = styled('div', {
   top: 0,
 
   width: '100%',
-  height: '640px',
+
   overflow: ' hidden',
 
   animation: `${slideIn} 0.35s`,
@@ -55,10 +55,13 @@ export const DropdownFooter = styled('div', {
   width: '100%',
   height: '70px',
   background: '#15171B',
-  left: 0,
-  top: 570,
+  bottom: 0,
+  columnGap: '5rem',
 })
 
 export const DropdownFooterItems = styled('div', {
   display: 'flex',
+  gap: '1rem',
+  alignItems: 'center',
+  fontWeight: 'bold',
 })
