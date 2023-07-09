@@ -1,5 +1,4 @@
-// components/Dropdown.jsx
-import { useEffect, useRef, ReactNode } from 'react'
+import { ReactNode, useEffect, useRef, useState } from 'react'
 import {
   DropdownContainer,
   DropdownMenuBackground,
@@ -20,23 +19,34 @@ export interface DropdownMenuLink {
 }
 
 export default function Dropdown({ opened, setOpened }: DropdownMenuProps) {
+  const overlayRef = useRef<HTMLDivElement>(null)
   const dropdownRef = useRef<HTMLDivElement>(null)
+  const [isClickInside, setIsClickInside] = useState(false)
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    function handleClickOutside(event: MouseEvent) {
       if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
+        !isClickInside &&
+        overlayRef.current &&
+        !overlayRef.current.contains(event.target as Node)
       ) {
         setOpened(null)
       }
+      setIsClickInside(false)
+    }
+
+    function handleMouseDownInsideDropdown() {
+      setIsClickInside(true)
     }
 
     document.addEventListener('mousedown', handleClickOutside)
+    document.addEventListener('mousedown', handleMouseDownInsideDropdown)
+
     return () => {
       document.removeEventListener('mousedown', handleClickOutside)
+      document.removeEventListener('mousedown', handleMouseDownInsideDropdown)
     }
-  }, [setOpened])
+  }, [setOpened, isClickInside])
 
   const setHeight =
     opened?.name === 'Jogos'
@@ -46,12 +56,14 @@ export default function Dropdown({ opened, setOpened }: DropdownMenuProps) {
       : ''
 
   return (
-    <DropdownContainer>
+    <DropdownContainer ref={overlayRef}>
       {opened && (
-        <DropdownMenuBackground css={{ height: setHeight }} ref={dropdownRef}>
-          <DropdownMenu>{opened?.dropdown!.content}</DropdownMenu>
+        <DropdownMenuBackground css={{ height: setHeight }}>
+          <DropdownMenu ref={dropdownRef}>
+            {opened.dropdown!.content}
+          </DropdownMenu>
           <DropdownFooter>
-            {opened?.dropdown?.links.map((link, index) => (
+            {opened.dropdown?.links.map((link, index) => (
               <DropdownFooterItems key={`link-${index}`}>
                 <span>{link.icon}</span>
                 <span>{link.label}</span>
