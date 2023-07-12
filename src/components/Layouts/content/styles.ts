@@ -13,6 +13,10 @@ export const HeaderContent = styled('div', {
   gridTemplateColumns: 'repeat(3, 1fr)',
   columnGap: '8rem',
   alignItems: 'center',
+
+  '@media (max-width: 1440px)': { maxWidth: '1000px', columnGap: '13rem' },
+
+  '@media (max-width: 768px)': { maxWidth: '500px', columnGap: '13rem' },
 })
 
 export const HeaderTilesTextContainer = styled('div', {
@@ -45,6 +49,7 @@ export const ContainerLogoTrailer = styled('div', {
   gridTemplateColumns: '1fr',
   alignItems: 'center',
   gap: '8rem',
+  '@media (max-width: 375px)': { display: 'none' },
 })
 
 export const LogoContainer = styled('div', {

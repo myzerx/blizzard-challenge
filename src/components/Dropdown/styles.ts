@@ -27,6 +27,9 @@ export const DropdownMenuBackground = styled('div', {
   overflow: ' hidden',
 
   animation: `${slideIn} 0.35s`,
+  '@media (max-width: 1440px)': { width: '1640px' },
+  '@media (max-width: 768px)': {},
+  '@media (max-width: 375px)': {},
 })
 
 export const DropdownMenu = styled('div', {

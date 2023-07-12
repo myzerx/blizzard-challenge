@@ -6,8 +6,10 @@ export const ContainerIcons = styled('div', {
 
 export const ContainerGrid = styled('div', {
   display: 'grid',
-  gridTemplateColumns: 'colums',
+  flexDirection: 'row',
   gap: '1.5rem',
+
+  '@media (max-width: 768px)': { display: 'grid', gridTemplateRows: 'rows' },
 })
 
 export const Icon = styled('img', {

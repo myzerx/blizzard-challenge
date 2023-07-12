@@ -3,9 +3,8 @@ import { Eye, EyeSlash } from '@phosphor-icons/react'
 
 export const LoginContainer = styled('div', {
   display: 'flex',
-  height: 'calc(100vh - 100px)',
   justifyContent: 'center',
-  padding: '0.625rem',
+  padding: '7.625rem',
   overflow: 'hidden',
 })
 
@@ -140,7 +139,7 @@ export const ButtonLogin = styled('button', {
 
   padding: '0.5rem 1rem',
 
-  width: '100%',
+  width: '97%',
   height: '100%',
 
   maxHeight: '2.5rem',
@@ -157,7 +156,7 @@ export const ButtonLogin = styled('button', {
   },
 
   '@media (max-width: 575px)': {
-    width: '21.5rem',
+    width: '20.5rem',
   },
 })
 
@@ -169,6 +168,7 @@ export const ButtonText = styled('text', {
 
 export const TextAccountContainer = styled('div', {
   display: 'flex',
+  width: '390px',
   justifyContent: 'center',
   alignItems: 'center',
   flexDirection: 'column',

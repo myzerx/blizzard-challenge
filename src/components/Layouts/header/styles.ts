@@ -45,6 +45,12 @@ export const HeaderHeader = styled('header', {
 
   borderBottomColor: '$white-opacity-10',
   zIndex: 9999,
+
+  '@media (max-width: 1440px)': {
+    width: '1640px',
+    border: '1px solid transparent',
+    borderBottomColor: '$white-opacity-10',
+  },
 })
 
 export const HeaderContent = styled('div', {
@@ -56,6 +62,10 @@ export const HeaderContent = styled('div', {
   alignItems: 'center',
   justifyContent: 'space-between',
   columnGap: '8rem',
+
+  '@media (max-width: 1440px)': { columnGap: '15rem' },
+
+  '@media (max-width: 375px)': {},
 })
 
 export const HeaderTabs = styled('nav', {
@@ -70,6 +80,8 @@ export const HeaderNavsContainer = styled('span', {
   alignItems: 'center',
   gap: '0.5rem',
   cursor: 'pointer',
+  '@media (max-width: 768px)': { display: 'none' },
+  '@media (max-width: 375px)': { display: 'none' },
 })
 
 export const HeaderNavsIcon = styled('div', {

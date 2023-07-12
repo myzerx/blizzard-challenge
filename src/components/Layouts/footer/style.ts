@@ -1,12 +1,24 @@
 import { styled } from '@stitches/react'
 
-export const FooterContainer = styled('div', {})
+export const FooterContainer = styled('div', {
+  '@media (max-width: 1440px)': { width: '1640px' },
+
+  '@media (max-width: 768px)': {},
+
+  '@media (max-width: 375px)': {},
+})
 
 export const FooterHeader = styled('div', {
   display: 'flex',
   maxWidth: '1200px',
-  minHeight: '90vh',
+  minHeight: '830px',
   margin: '0 auto',
+
+  '@media (max-width: 1440px)': { height: '830px' },
+
+  '@media (max-width: 768px)': {},
+
+  '@media (max-width: 375px)': {},
 })
 
 export const FooterContent = styled('div', {
@@ -71,10 +83,18 @@ export const BackgroundGrid = styled('div', {
   position: 'absolute',
   top: '-2rem',
   left: '-5rem',
+
+  '@media (max-width: 1440px)': { left: '-12rem' },
+
+  '@media (max-width: 375px)': {},
 })
 
 export const BackgroundInside = styled('div', {
   position: 'absolute',
   top: '20rem',
   left: '13rem',
+
+  '@media (max-width: 1440px)': { left: '5.5rem' },
+
+  '@media (max-width: 375px)': {},
 })
