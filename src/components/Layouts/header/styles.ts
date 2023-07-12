@@ -64,8 +64,6 @@ export const HeaderContent = styled('div', {
   columnGap: '8rem',
 
   '@media (max-width: 1440px)': { columnGap: '15rem' },
-
-  '@media (max-width: 375px)': {},
 })
 
 export const HeaderTabs = styled('nav', {

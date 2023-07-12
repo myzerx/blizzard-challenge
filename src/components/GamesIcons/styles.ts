@@ -6,10 +6,15 @@ export const ContainerIcons = styled('div', {
 
 export const ContainerGrid = styled('div', {
   display: 'grid',
-  flexDirection: 'row',
+  flexDirection: 'column',
   gap: '1.5rem',
 
-  '@media (max-width: 768px)': { display: 'grid', gridTemplateRows: 'rows' },
+  '@media (max-width: 768px)': {
+    position: 'absolute',
+    display: 'grid',
+    gridTemplateColumns: 'repeat(5, 1fr)',
+    margin: '200px 0 0 200px',
+  },
 })
 
 export const Icon = styled('img', {
