@@ -45,6 +45,7 @@ export const ExclusiveGridIcons = styled('div', {
   display: 'flex',
   gap: '1.5rem',
   width: '8%',
+
   '&:hover': {
     cursor: 'pointer',
   },
@@ -55,6 +56,11 @@ export const ExclusiveGamesAllGames = styled('div', {
   justifyContent: 'space-between',
   alignItems: 'center',
   gap: '1rem',
+
+  '&:hover': {
+    filter: 'brightness(65%)',
+    cursor: 'pointer',
+  },
 })
 
 export const ExclusiveGamesAllGamesText = styled('span', {
@@ -129,6 +135,7 @@ export const ExclusiveGamesTileMoreGamesIcon = styled('div', {
   alignItems: 'center',
   gap: '0.750rem',
   '&:hover': {
+    filter: 'brightness(65%)',
     cursor: 'pointer',
   },
 })
