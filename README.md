@@ -10,13 +10,13 @@ a Figma prototype was used as a basis, designed by Gilberto Prado.
 ## 🚀 Tecnologias
 
 - [Next.js](https://nextjs.org/)
-    Next.js is a JavaScript framework for building server-rendered React applications.
+    is a JavaScript framework for building server-rendered React applications.
 
 - [Stitches](https://stitches.dev/)
-    Stitches is a lightweight CSS-in-JS library for styling React components with a minimalistic and intuitive API.
+    is a lightweight CSS-in-JS library for styling React components with a minimalistic and intuitive API.
 
 - [ESLint](https://github.com/eslint/eslint)
-    ESLint is a tool for identifying and reporting patterns found in ECMAScript/JavaScript code. (Source: ESLint)
+    is a tool for identifying and reporting patterns found in ECMAScript/JavaScript code. (Source: ESLint)
 
 
 ## Scripts
@@ -57,7 +57,7 @@ By running the appropriate command, your app will be launched, and you can acces
 
 - [x] Create sections: **Menu**, **Banner hero**, **Footer**.
 
-- [ ] Modify the text and icon of the "Download game" button according to the user's operating system accessing the page. ([supporting material](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/userAgent))
+- [x] Modify the text and icon of the "Download game" button according to the user's operating system accessing the page. ([supporting material](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/userAgent))
 
 - [x] Apply hover effect to navigation menu options.
 
@@ -83,4 +83,4 @@ By running the appropriate command, your app will be launched, and you can acces
 
 - [x] Create a dropdown component for the **Games** and **Sports** options in the navigation menu.
 
-- [ ] Play a game GIF when hovering over the trailer cover.
+- [x] Play a game GIF when hovering over the trailer cover.
