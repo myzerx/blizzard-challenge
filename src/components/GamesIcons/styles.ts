@@ -12,11 +12,17 @@ export const ContainerGrid = styled('div', {
 
   alignContent: 'center',
 
-  '@media (max-width: 768px)': {
+  '@media (max-width: 768px) ': {
     position: 'absolute',
     display: 'grid',
     gridTemplateColumns: 'repeat(5, 1fr)',
-    margin: '12.5rem 0 0 12.5rem',
+    margin: '24.5rem 0 0 0.5rem',
+  },
+
+  '@media (min-width: 375px) and (max-width: 768px)': {
+    position: 'absolute',
+
+    margin: '25rem 0 0 0.1rem',
   },
 })
 

@@ -7,6 +7,11 @@ export const FooterHeader = styled('div', {
   maxWidth: '1200px',
   minHeight: '830px',
   margin: '0 auto',
+
+  '@media (max-width: 768px) ': {
+    maxWidth: '700px',
+  },
+  '@media (min-width: 375px) and (max-width: 768px)': { maxWidth: '325px' },
 })
 
 export const FooterContent = styled('div', {
@@ -68,11 +73,7 @@ export const Teste = styled('div', {
   position: 'sticky',
 })
 
-export const BackgroundGrid = styled('div', {
-  position: 'absolute',
-  top: '-2rem',
-  left: '-5rem',
-})
+export const BackgroundGrid = styled('div', {})
 
 export const BackgroundInside = styled('div', {
   position: 'absolute',

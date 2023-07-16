@@ -46,7 +46,7 @@ export default function Content() {
             ) : (
               <Button weight={'bold'} size={'full'}>
                 <User size={20} weight={'bold'} />
-                Reserve agora na pré-venda
+                <span> Reserve agora na pré-venda </span>
               </Button>
             )}
           </ButtonContainer>

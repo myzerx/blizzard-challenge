@@ -1,8 +1,10 @@
 import { IconProps } from './IconProps'
 
+import { styled } from '@stitches/react'
+
 export function GroupBoxes({ width, height, color }: IconProps) {
   return (
-    <svg
+    <IconSVG
       width={width}
       height={height}
       viewBox="0 0 9 10"
@@ -13,6 +15,10 @@ export function GroupBoxes({ width, height, color }: IconProps) {
       <rect y="6.5" width="3" height="3" fill={color} />
       <rect x="6" y="0.5" width="3" height="3" fill={color} />
       <rect x="6" y="6.5" width="3" height="3" fill={color} />
-    </svg>
+    </IconSVG>
   )
 }
+
+const IconSVG = styled('svg', {
+  '@media (min-width: 375px) and (max-width: 768px)': { display: 'none' },
+})

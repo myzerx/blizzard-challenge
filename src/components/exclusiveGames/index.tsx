@@ -19,6 +19,8 @@ import {
   ExclusiveGamesTileMoreGamesText,
   ExclusiveGamesText,
   ExclusiveGamesAllGamesText,
+  ExclusiveGamesTile,
+  ExclusiveGamesTileIcon,
 } from './styles'
 
 import { ThirdPartyPlatformIcons } from '../ThirdPartyPlatform/icons'
@@ -103,9 +105,9 @@ export default function ExclusiveGames() {
           {gameData.map((game) => (
             <ExclusiveGamesGridContainer data-aos="fade-right" key={game.id}>
               <ExclusiveGamesImageBackground>
-                <img src={game.image} alt={game.name} />
+                <ExclusiveGamesTile src={game.image} alt={game.name} />
                 <ExclusiveGamesImageLogo>
-                  <img src={game.logo} alt={game.name} />
+                  <ExclusiveGamesTileIcon src={game.logo} alt={game.name} />
                 </ExclusiveGamesImageLogo>
               </ExclusiveGamesImageBackground>
               <ExclusiveGamesGridText>
