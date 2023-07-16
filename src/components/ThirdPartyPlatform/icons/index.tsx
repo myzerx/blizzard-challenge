@@ -1,16 +1,13 @@
-import Image from 'next/image'
 import { ThirdPartyPlatformIconsContainer } from './styles'
-
+import React from 'react'
 interface ThirdPartyPlatformIconsProps {
-  icon: string
+  icon: React.ReactNode
 }
 
 export function ThirdPartyPlatformIcons({
   icon,
 }: ThirdPartyPlatformIconsProps) {
   return (
-    <ThirdPartyPlatformIconsContainer>
-      <Image src={icon} alt="ThirdPartyIcon" />
-    </ThirdPartyPlatformIconsContainer>
+    <ThirdPartyPlatformIconsContainer>{icon}</ThirdPartyPlatformIconsContainer>
   )
 }

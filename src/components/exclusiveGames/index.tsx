@@ -22,12 +22,9 @@ import {
 } from './styles'
 
 import { ThirdPartyPlatformIcons } from '../ThirdPartyPlatform/icons'
-import battlenet from '../../../public/battlenet-mini-icon.svg'
-import nintendo from '../../../public/nintendo-mini-icon.svg'
-import xbox from '../../../public/xbox-mini-icon.svg'
-import playstation from '../../../public/playstation-mini-icon.svg'
+
 import logoBlizzard from '../../../public/logo-blizzard.png'
-import groupBoxes from '../../../public/groupBoxes.svg'
+
 import Image from 'next/image'
 
 import { useGameData } from '../CustomHooks/useFetch/fetchGameData'
@@ -35,6 +32,11 @@ import { ProgressBar } from '../ProgressBar'
 import { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { GroupBoxes } from '../Icons/GroupBoxes'
+import { NintendoMiniIcon } from '../Icons/exclusiveGames/Nintendo-mini-Icon'
+import { XboxMiniIcon } from '../Icons/exclusiveGames/Xbox-mini-Icon'
+import { PlaystationMiniIcon } from '../Icons/exclusiveGames/Playstation-mini-icon'
+import { BattlenetMiniIcon } from '../Icons/Battlenet-mini-Icon'
 
 export default function ExclusiveGames() {
   const gameData = useGameData()
@@ -55,13 +57,41 @@ export default function ExclusiveGames() {
             <ExclusiveGamesTitleText>Jogos exclusivos</ExclusiveGamesTitleText>
             <ExclusiveGamesIcons>
               <ExclusiveGridIcons>
-                <ThirdPartyPlatformIcons icon={battlenet} />
-                <ThirdPartyPlatformIcons icon={nintendo} />
-                <ThirdPartyPlatformIcons icon={xbox} />
-                <ThirdPartyPlatformIcons icon={playstation} />
+                <ThirdPartyPlatformIcons
+                  icon={
+                    <BattlenetMiniIcon
+                      width={'20'}
+                      height={'20'}
+                      color={'white'}
+                    />
+                  }
+                />
+                <ThirdPartyPlatformIcons
+                  icon={
+                    <NintendoMiniIcon
+                      width={'20'}
+                      height={'20'}
+                      color={'white'}
+                    />
+                  }
+                />
+                <ThirdPartyPlatformIcons
+                  icon={
+                    <XboxMiniIcon width={'20'} height={'20'} color={'white'} />
+                  }
+                />
+                <ThirdPartyPlatformIcons
+                  icon={
+                    <PlaystationMiniIcon
+                      width={'20'}
+                      height={'20'}
+                      color={'white'}
+                    />
+                  }
+                />
               </ExclusiveGridIcons>
               <ExclusiveGamesAllGames>
-                <Image src={groupBoxes} alt="" />
+                <GroupBoxes width={'9'} height={'10'} color={'#00AEFF'} />
                 <ExclusiveGamesAllGamesText>
                   Ver todos os jogos
                 </ExclusiveGamesAllGamesText>
@@ -89,7 +119,7 @@ export default function ExclusiveGames() {
           <ExclusiveGamesTileMoreGames data-aos="fade-right">
             <Image src={logoBlizzard} alt="Blizzard Logo" />
             <ExclusiveGamesTileMoreGamesIcon>
-              <Image src={groupBoxes} alt="" />
+              <GroupBoxes width={'9'} height={'10'} color={'white'} />
               <ExclusiveGamesTileMoreGamesText>
                 Ver todos os jogos
               </ExclusiveGamesTileMoreGamesText>

@@ -19,13 +19,18 @@ import {
   HeaderContainerLogoBar,
   HeaderNavsContainer,
   HeaderNavsIcon,
+  ButtonsText,
 } from './styles'
 import Dropdown, { DropdownMenuLink } from '@/components/Dropdown'
 import { ReactNode, useState } from 'react'
 import GamesDropdown from '@/components/Dropdown/GamesDropdown'
 import SportsDropdown from '@/components/Dropdown/SportsDropdown'
 import { ThirdPartyPlatformIcons } from '@/components/ThirdPartyPlatform/icons'
-import battleNet from '../../../../public/battlenet-mini-icon.svg'
+import { BattlenetMiniIcon } from '@/components/Icons/Battlenet-mini-Icon'
+import { GroupBoxes } from '@/components/Icons/GroupBoxes'
+import { DownloadIcon } from '@/components/Icons/DownloadIcon'
+import { ChatIcon } from '@/components/Icons/ChatIcon'
+import { TournamentIcon } from '@/components/Icons/TournamentIcon'
 
 export interface NavbarOption {
   name: string
@@ -42,19 +47,43 @@ const HeaderNavOptions: NavbarOption[] = [
       content: <GamesDropdown />,
       links: [
         {
-          icon: <ThirdPartyPlatformIcons icon={battleNet} />,
+          icon: (
+            <ThirdPartyPlatformIcons
+              icon={<GroupBoxes width="9px" height="10px" color={'#00AEFF'} />}
+            />
+          ),
           label: 'Ver todos os jogos',
         },
         {
-          icon: <ThirdPartyPlatformIcons icon={battleNet} />,
+          icon: (
+            <ThirdPartyPlatformIcons
+              icon={
+                <BattlenetMiniIcon
+                  width="24px"
+                  height="24px"
+                  color={'#00AEFF'}
+                />
+              }
+            />
+          ),
           label: 'Aplicativo Battle.net',
         },
         {
-          icon: <ThirdPartyPlatformIcons icon={battleNet} />,
+          icon: (
+            <ThirdPartyPlatformIcons
+              icon={
+                <DownloadIcon width="24px" height="24px" color={'#00AEFF'} />
+              }
+            />
+          ),
           label: 'Downloads',
         },
         {
-          icon: <ThirdPartyPlatformIcons icon={battleNet} />,
+          icon: (
+            <ThirdPartyPlatformIcons
+              icon={<ChatIcon width="24px" height="24px" color={'#00AEFF'} />}
+            />
+          ),
           label: 'Fóruns dos jogos',
         },
       ],
@@ -66,7 +95,13 @@ const HeaderNavOptions: NavbarOption[] = [
       content: <SportsDropdown />,
       links: [
         {
-          icon: <ThirdPartyPlatformIcons icon={battleNet} />,
+          icon: (
+            <ThirdPartyPlatformIcons
+              icon={
+                <TournamentIcon width="24px" height="24px" color={'#00AEFF'} />
+              }
+            />
+          ),
           label: 'Torneios da comunidade',
         },
       ],
@@ -140,7 +175,7 @@ export default function Header() {
             </HeaderTabs>
             <ButtonContainer>
               <Button size={'small'} variant={'outline'}>
-                Criar Conta
+                <ButtonsText> Criar Conta </ButtonsText>
               </Button>
               <Button
                 size={'small'}
@@ -149,7 +184,7 @@ export default function Header() {
                 weight={'normal'}
               >
                 <User size={20} weight={'bold'} />
-                Logar
+                <ButtonsText> Logar </ButtonsText>
               </Button>
             </ButtonContainer>
           </HeaderContent>

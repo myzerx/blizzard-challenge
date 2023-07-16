@@ -1,16 +1,15 @@
 /* react/next imports */
 import { useRouter } from 'next/router'
-import Image from 'next/image'
 import { useState } from 'react'
 
 /* logos section */
-import logoBattleNet from '../../../public/logo-battlenet.svg'
-import facebooklogo from '../../assets/thirdPartyIcons/icons8-facebook.svg'
-import googlelogo from '../../assets/thirdPartyIcons/icons8-google-20.svg'
-import applelogo from '../../assets/thirdPartyIcons/icons8-apple.svg'
-import playstationlogo from '../../assets/thirdPartyIcons/icons8-playstation.svg'
-import xboxlogo from '../../assets/thirdPartyIcons/icons8-xbox.svg'
-import nintendologo from '../../assets/thirdPartyIcons/nintendo-switch.svg'
+import { BattlenetLogo } from '@/components/Icons/BattlenetLogo'
+import { GoogleIcon } from '@/components/Icons/ThirdPartyIcons/GoogleIcon'
+import { FacebookIcon } from '@/components/Icons/ThirdPartyIcons/FacebookIcon'
+import { AppleIcon } from '@/components/Icons/ThirdPartyIcons/AppleIcon'
+import { PlaystationIcon } from '@/components/Icons/ThirdPartyIcons/PlaystationIcon'
+import { XboxIcon } from '@/components/Icons/ThirdPartyIcons/XboxIcon'
+import { NintendoIcon } from '@/components/Icons/ThirdPartyIcons/NintendoIcon'
 
 /* components imports */
 import {
@@ -51,7 +50,7 @@ export default function Login() {
     <LoginContainer>
       <LoginHeader>
         <ImageContainer>
-          <Image src={logoBattleNet} alt="" />
+          <BattlenetLogo width={'240px'} height={'40px'} />
         </ImageContainer>
 
         <TitleText> Conectar-se </TitleText>
@@ -59,27 +58,71 @@ export default function Login() {
         <GridBoxes>
           <ThirdPartyPlatformLogin
             displayColor="$white"
-            icon={<ThirdPartyPlatformIcons icon={googlelogo} />}
+            icon={
+              <ThirdPartyPlatformIcons
+                icon={<GoogleIcon width={'20px'} height={'20px'} />}
+              />
+            }
           />
           <ThirdPartyPlatformLogin
             displayColor="$blue-500"
-            icon={<ThirdPartyPlatformIcons icon={facebooklogo} />}
+            icon={
+              <ThirdPartyPlatformIcons
+                icon={
+                  <FacebookIcon
+                    width={'20px'}
+                    height={'20px'}
+                    color={'white'}
+                  />
+                }
+              />
+            }
           />
           <ThirdPartyPlatformLogin
             displayColor="$white"
-            icon={<ThirdPartyPlatformIcons icon={applelogo} />}
+            icon={
+              <ThirdPartyPlatformIcons
+                icon={<AppleIcon width={'20px'} height={'20px'} />}
+              />
+            }
           />
           <ThirdPartyPlatformLogin
             displayColor="$green-700"
-            icon={<ThirdPartyPlatformIcons icon={xboxlogo} />}
+            icon={
+              <ThirdPartyPlatformIcons
+                icon={
+                  <XboxIcon width={'18px'} height={'18px'} color={'white'} />
+                }
+              />
+            }
           />
           <ThirdPartyPlatformLogin
             displayColor="$blue-400"
-            icon={<ThirdPartyPlatformIcons icon={playstationlogo} />}
+            icon={
+              <ThirdPartyPlatformIcons
+                icon={
+                  <PlaystationIcon
+                    width={'24px'}
+                    height={'24px'}
+                    color={'white'}
+                  />
+                }
+              />
+            }
           />
           <ThirdPartyPlatformLogin
             displayColor="$red"
-            icon={<ThirdPartyPlatformIcons icon={nintendologo} />}
+            icon={
+              <ThirdPartyPlatformIcons
+                icon={
+                  <NintendoIcon
+                    width={'20px'}
+                    height={'20px'}
+                    color={'white'}
+                  />
+                }
+              />
+            }
           />
         </GridBoxes>
 
