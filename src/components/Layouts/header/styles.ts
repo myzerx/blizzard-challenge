@@ -6,9 +6,7 @@ export const BackgroundContainer = styled('div', {
 })
 
 export const BackgroundImage = styled('div', {
-  position: 'fixed',
-  top: 0,
-  left: 0,
+  position: 'absolute',
   width: '100%',
   height: '100%',
   display: 'flex',
@@ -45,31 +43,23 @@ export const HeaderHeader = styled('header', {
 
   borderBottomColor: '$white-opacity-10',
   zIndex: 9999,
-
-  '@media (max-width: 1440px)': {
-    width: '1640px',
-    border: '1px solid transparent',
-    borderBottomColor: '$white-opacity-10',
-  },
 })
 
 export const HeaderContent = styled('div', {
   height: '100%',
   width: '100%',
-  maxWidth: '1200px',
+  maxWidth: '1400px',
   margin: '0 auto',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  columnGap: '8rem',
-
-  '@media (max-width: 1440px)': { columnGap: '15rem' },
+  columnGap: '11.5rem',
 })
 
 export const HeaderTabs = styled('nav', {
   display: 'flex',
   alignItems: 'center',
-  columnGap: '2.8rem',
+  columnGap: '3rem',
   flex: 1,
 })
 
@@ -78,8 +68,6 @@ export const HeaderNavsContainer = styled('span', {
   alignItems: 'center',
   gap: '0.5rem',
   cursor: 'pointer',
-  '@media (max-width: 768px)': { display: 'none' },
-  '@media (max-width: 375px)': { display: 'none' },
 })
 
 export const HeaderNavsIcon = styled('div', {
@@ -101,4 +89,10 @@ export const ButtonContainer = styled('div', {
   display: 'flex',
   flexDirection: 'row',
   gap: '1rem',
+})
+
+export const ButtonsText = styled('text', {
+  fontSize: '0.9rem',
+  fontWeight: '500',
+  fontFamily: 'poppins',
 })
