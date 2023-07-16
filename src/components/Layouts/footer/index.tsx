@@ -104,14 +104,14 @@ export default function Footer() {
             </FooterMobileApplicationText>
           </FooterMobileApplicationContainer>
         </FooterContent>
-        <Teste>
+        {/* <Teste>
           <BackgroundGrid>
             <Image src={appImage} alt="" />
           </BackgroundGrid>
           <BackgroundInside>
             <Image src={appImageMini} alt="" />
           </BackgroundInside>
-        </Teste>
+        </Teste> */}
       </FooterHeader>
     </FooterContainer>
   )
