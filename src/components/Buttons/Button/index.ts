@@ -12,11 +12,9 @@ export const Button = styled('button', {
   borderRadius: '0.25rem',
 
   border: 'none',
-
-  transition: '0.1s transform ease-in-out',
-
+  transition: '0.35s transform ease-in-out',
   '&:hover': {
-    transform: 'scale(1.01)',
+    transform: 'scale(1.10)',
     cursor: 'pointer',
   },
 
@@ -30,7 +28,7 @@ export const Button = styled('button', {
         width: '12.5rem',
       },
       full: {
-        width: '60%',
+        width: '100%',
       },
     },
     weight: {
@@ -48,6 +46,29 @@ export const Button = styled('button', {
       outline: {
         background: 'transparent',
         border: '1px solid $white',
+        position: 'relative',
+        overflow: 'hidden',
+
+        '&::after': {
+          content: '""',
+          position: 'absolute',
+          width: '100%',
+          height: 0,
+          background: '$white',
+          display: 'block',
+          bottom: 0,
+          left: 0,
+          zIndex: -1,
+          transition: 'all ease 0.4s',
+        },
+
+        '&:hover': {
+          color: '$black',
+
+          '&::after': {
+            height: '100%',
+          },
+        },
       },
     },
   },
