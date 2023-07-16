@@ -7,29 +7,18 @@ export const ContentContainer = styled('div', {
 })
 
 export const HeaderContent = styled('div', {
-  maxWidth: '1200px',
+  maxWidth: '1400px',
   margin: '0 auto',
   display: 'grid',
   gridTemplateColumns: 'repeat(3, 1fr)',
   columnGap: '8rem',
-  alignItems: 'center',
-
-  '@media (max-width: 1440px)': { maxWidth: '1000px', columnGap: '13rem' },
-
-  '@media (max-width: 768px)': {
-    maxWidth: '750px',
-  },
-
-  '@media (max-width: 375px)': {
-    maxWidth: '400px',
-  },
 })
 
 export const HeaderTilesTextContainer = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   gap: '1rem',
-  padding: '0 0 4rem 0',
+  padding: '0 6rem 4rem 0',
 })
 
 export const HeaderTilesTitleText = styled('text', {
@@ -48,16 +37,15 @@ export const HeaderTilesSubTitleText = styled('text', {
 export const ButtonContainer = styled('div', {
   display: 'flex',
   padding: '1.25rem 0 0 0',
+  width: '60%',
 })
 
 export const ContainerLogoTrailer = styled('div', {
   display: 'grid',
   gridTemplateColumns: '1fr',
   alignItems: 'center',
-  gap: '8rem',
-  '@media (max-width: 768px)': {
-    marginLeft: '7rem',
-  },
+  marginTop: '-2rem',
+  gap: '10rem',
 })
 
 export const LogoContainer = styled('div', {
@@ -82,4 +70,16 @@ export const GifContainer = styled('div', {
   height: '158px',
 
   backgroundSize: 'cover',
+})
+
+export const PlayButtonTrailer = styled('div', {
+  position: 'absolute',
+  top: 80,
+  left: 140,
+  transform: 'translate(-50%, -50%)',
+  width: '50px',
+  height: '50px',
+  backgroundImage: 'url(/playButtonTrailer.png)',
+  backgroundSize: 'contain',
+  backgroundRepeat: 'no-repeat',
 })

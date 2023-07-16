@@ -17,6 +17,7 @@ import {
   TrailerText,
   ContainerTrailer,
   GifContainer,
+  PlayButtonTrailer,
 } from './styles'
 
 export default function Content() {
@@ -58,9 +59,21 @@ export default function Content() {
             <TrailerText> ASSISTA O TRAILER</TrailerText>
             <GifContainer
               css={{
-                backgroundImage: `url(${selectedGame?.images.gif})`,
+                position: 'relative',
+                backgroundImage: `url(${selectedGame?.images.cover})`,
+                transition: 'background-image 0.3s ease-in-out',
+
+                '&:hover': {
+                  backgroundImage: `url(${selectedGame?.images.gif})`,
+                  cursor: 'pointer',
+                },
+                '&:hover div': {
+                  visibility: 'hidden',
+                },
               }}
-            />
+            >
+              <PlayButtonTrailer />
+            </GifContainer>
           </ContainerTrailer>
         </ContainerLogoTrailer>
       </HeaderContent>

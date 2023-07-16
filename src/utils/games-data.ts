@@ -8,6 +8,7 @@ export const GamesData = [
       icon: '/banner-hero/icons/diablo4-icon.png',
       banner: '/banner-hero/games/diablo4-bg.png',
       gif: '/banner-hero/games/diablo4-animation.gif',
+      cover: '/banner-hero/games/diablo4-cover.png',
     },
     texts: {
       title: 'Retorne à escuridão com o game Diablo IV',
@@ -23,6 +24,7 @@ export const GamesData = [
       icon: '/banner-hero/icons/hearthstone-icon.png',
       banner: '/banner-hero/games/hearthstone-bg.png',
       gif: '/banner-hero/games/hearthstone-animation.gif',
+      cover: '/banner-hero/games/hearthstone-cover.png',
     },
     texts: {
       title: 'Novo pacote de expansão de Hearthstone',
@@ -38,6 +40,7 @@ export const GamesData = [
       icon: '/banner-hero/icons/wow-icon.png',
       banner: '/banner-hero/games/wow-bg.png',
       gif: '/banner-hero/games/wow-animation.gif',
+      cover: '/banner-hero/games/wow-cover.png',
     },
     texts: {
       title: 'Desbrave as Terras Sombrias em Shadowlands!',
@@ -53,6 +56,7 @@ export const GamesData = [
       icon: '/banner-hero/icons/diabloimmortal-icon.png',
       banner: '/banner-hero/games/diabloimmortal-bg.png',
       gif: '/banner-hero/games/diabloimmortal-animation.gif',
+      cover: '/banner-hero/games/diabloimmortal-cover.jpeg',
     },
     texts: {
       title: 'Afunde nas trevas com o game Diablo Immortal',
@@ -68,6 +72,7 @@ export const GamesData = [
       icon: '/banner-hero/icons/starcraft-icon.png',
       banner: '/banner-hero/games/starcraft-bg.jpg',
       gif: '/banner-hero/games/starcraft-animation.gif',
+      cover: '/banner-hero/games/starcraft-cover.jpg',
     },
     texts: {
       title: 'Declare guerra pela galáxia com Starcraft II',
