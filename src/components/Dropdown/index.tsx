@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useRef, useState } from 'react'
+import { ReactNode } from 'react'
 import {
   DropdownContainer,
   DropdownMenuBackground,
@@ -19,34 +19,9 @@ export interface DropdownMenuLink {
 }
 
 export default function Dropdown({ opened, setOpened }: DropdownMenuProps) {
-  const overlayRef = useRef<HTMLDivElement>(null)
-  const dropdownRef = useRef<HTMLDivElement>(null)
-  const [isClickInside, setIsClickInside] = useState(false)
-
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (
-        !isClickInside &&
-        overlayRef.current &&
-        !overlayRef.current.contains(event.target as Node)
-      ) {
-        setOpened(null)
-      }
-      setIsClickInside(false)
-    }
-
-    function handleMouseDownInsideDropdown() {
-      setIsClickInside(true)
-    }
-
-    document.addEventListener('mousedown', handleClickOutside)
-    document.addEventListener('mousedown', handleMouseDownInsideDropdown)
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside)
-      document.removeEventListener('mousedown', handleMouseDownInsideDropdown)
-    }
-  }, [setOpened, isClickInside])
+  const handleSpanClick = () => {
+    setOpened(null)
+  }
 
   const setHeight =
     opened?.name === 'Jogos'
@@ -56,17 +31,15 @@ export default function Dropdown({ opened, setOpened }: DropdownMenuProps) {
       : ''
 
   return (
-    <DropdownContainer ref={overlayRef}>
+    <DropdownContainer>
       {opened && (
         <DropdownMenuBackground css={{ height: setHeight }}>
-          <DropdownMenu ref={dropdownRef}>
-            {opened.dropdown!.content}
-          </DropdownMenu>
+          <DropdownMenu>{opened.dropdown!.content}</DropdownMenu>
           <DropdownFooter>
             {opened.dropdown?.links.map((link, index) => (
               <DropdownFooterItems key={`link-${index}`}>
-                <span>{link.icon}</span>
-                <span>{link.label}</span>
+                <span onClick={handleSpanClick}>{link.icon}</span>
+                <span onClick={handleSpanClick}>{link.label}</span>
               </DropdownFooterItems>
             ))}
           </DropdownFooter>

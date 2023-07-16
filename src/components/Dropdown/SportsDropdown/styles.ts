@@ -2,14 +2,14 @@ import { styled } from '@stitches/react'
 
 export const SportsDropdownContainer = styled('div', {
   display: 'flex',
-  padding: '7rem 0 0 1rem',
+  padding: '7rem 0 0 3rem',
 })
 
 export const SportsGrid = styled('div', {
   display: 'grid',
   gridTemplateColumns: 'repeat(5, 1fr)',
 
-  columnGap: '1.5rem',
+  columnGap: '6rem',
   alignItems: 'baseline',
   padding: '3.6875rem 0 0 0',
 })

@@ -7,10 +7,10 @@ const slideIn = keyframes({
   to: { transform: 'translateY(0)' },
 })
 
-// const slideOut = keyframes({
-//   from: { transform: 'translateY(0)' },
-//   to: { transform: 'translateY(-100%)' },
-// })
+const slideOut = keyframes({
+  from: { transform: 'translateY(0)' },
+  to: { transform: 'translateY(-100%)' },
+})
 
 export const DropdownMenuBackground = styled('div', {
   position: 'absolute',
@@ -26,15 +26,16 @@ export const DropdownMenuBackground = styled('div', {
 
   overflow: ' hidden',
 
+  transition: 'all 0.35s',
   animation: `${slideIn} 0.35s`,
-  '@media (max-width: 1440px)': { width: '1640px' },
-  '@media (max-width: 768px)': {},
-  '@media (max-width: 375px)': {},
+  '&.slide-out': {
+    animation: `${slideOut} 0.35s`,
+  },
 })
 
 export const DropdownMenu = styled('div', {
   margin: '0 auto',
-  width: '1200px',
+  width: '1350px',
 })
 
 export const DropdownItem = styled('div', {
@@ -67,4 +68,9 @@ export const DropdownFooterItems = styled('div', {
   gap: '1rem',
   alignItems: 'center',
   fontWeight: 'bold',
+
+  '&:hover': {
+    filter: 'brightness(65%)',
+    cursor: 'pointer',
+  },
 })

@@ -2,14 +2,15 @@ import { styled } from '@stitches/react'
 
 export const GamesDropdownContainer = styled('div', {
   display: 'flex',
-  padding: '10.375rem 0 0 5rem',
+  padding: '10.375rem 0 0 0',
 })
 
 export const GamesGrid = styled('div', {
   display: 'grid',
   gridTemplateColumns: 'repeat(6, 1fr)',
   gap: '5rem',
-  columnGap: '6.5rem',
+  columnGap: '9rem',
+
   alignItems: 'baseline',
 })
 
