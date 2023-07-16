@@ -5,9 +5,6 @@ export const ExclusiveGamesContainer = styled('div', {
   background: '$black',
   height: '1850px',
   marginTop: '4rem',
-
-  '@media (max-width: 768px)': { height: '2500px' },
-  '@media (max-width: 1440px)': { width: '1640px' },
 })
 
 export const ExclusiveGamesHeader = styled('div', {
@@ -36,8 +33,6 @@ export const ExclusiveGamesTitleText = styled('div', {
   fontSize: '2rem',
   fontWeight: 'bold',
   lineHeight: '110%',
-
-  '@media (max-width: 375px)': { width: '50px' },
 })
 
 export const ExclusiveGamesIcons = styled('div', {
@@ -74,8 +69,6 @@ export const ExclusiveGamesGrid = styled('div', {
   display: 'grid',
   gridTemplateColumns: 'repeat(4, 1fr)',
   gap: '1.5rem',
-
-  '@media (max-width: 768px)': { gridTemplateColumns: 'repeat(3, 1fr)' },
 })
 
 export const ExclusiveGamesGridContainer = styled('div', {
@@ -129,8 +122,6 @@ export const ExclusiveGamesTileMoreGames = styled('div', {
   alignItems: 'center',
   gap: '1rem',
   height: '414px',
-
-  '@media (max-width: 768px)': { width: '301px' },
 })
 
 export const ExclusiveGamesTileMoreGamesIcon = styled('div', {

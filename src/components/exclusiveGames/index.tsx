@@ -32,9 +32,19 @@ import Image from 'next/image'
 
 import { useGameData } from '../CustomHooks/useFetch/fetchGameData'
 import { ProgressBar } from '../ProgressBar'
+import { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 export default function ExclusiveGames() {
   const gameData = useGameData()
+
+  useEffect(() => {
+    AOS.init({
+      duration: 500,
+    })
+  }, [])
+
   return (
     <ExclusiveGamesContainer>
       <ProgressBar />
@@ -61,7 +71,7 @@ export default function ExclusiveGames() {
         </ExclusiveGamesContent>
         <ExclusiveGamesGrid>
           {gameData.map((game) => (
-            <ExclusiveGamesGridContainer key={game.id}>
+            <ExclusiveGamesGridContainer data-aos="fade-right" key={game.id}>
               <ExclusiveGamesImageBackground>
                 <img src={game.image} alt={game.name} />
                 <ExclusiveGamesImageLogo>
@@ -76,7 +86,7 @@ export default function ExclusiveGames() {
               </ExclusiveGamesGridText>
             </ExclusiveGamesGridContainer>
           ))}
-          <ExclusiveGamesTileMoreGames>
+          <ExclusiveGamesTileMoreGames data-aos="fade-right">
             <Image src={logoBlizzard} alt="Blizzard Logo" />
             <ExclusiveGamesTileMoreGamesIcon>
               <Image src={groupBoxes} alt="" />
