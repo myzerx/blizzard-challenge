@@ -20,5 +20,5 @@ export function GroupBoxes({ width, height, color }: IconProps) {
 }
 
 const IconSVG = styled('svg', {
-  '@media (min-width: 375px) and (max-width: 768px)': { display: 'none' },
+  '@media (min-width: 375px) and (max-width: 767px)': { display: 'none' },
 })

@@ -5,7 +5,7 @@ export const ContentContainer = styled('div', {
   justifyContent: 'center',
   padding: '9rem 0 0 0',
 
-  '@media (min-width: 375px) and (max-width: 768px)': {
+  '@media (min-width: 375px) and (max-width: 767px)': {
     padding: '0 0 0 0',
   },
 })
@@ -17,12 +17,15 @@ export const HeaderContent = styled('div', {
   gridTemplateColumns: 'repeat(3, 1fr)',
   columnGap: '8rem',
 
-  '@media (min-width: 1440px)': { maxWidth: '1200px', columnGap: '6rem' },
-  '@media (max-width: 768px) ': {
+  '@media (min-width: 1440px)': {
+    maxWidth: '1200px',
+    columnGap: '6rem',
+  },
+  '@media (max-width: 1439px)': {
     maxWidth: '650px',
     columnGap: '0rem',
   },
-  '@media (min-width: 375px) and (max-width: 768px)': {
+  '@media (min-width: 375px) and (max-width: 767px)': {
     maxWidth: '325px',
     columnGap: '0rem',
     gridTemplateColumns: 'repeat(1, 1fr)',
@@ -35,7 +38,7 @@ export const HeaderTilesTextContainer = styled('div', {
   flexDirection: 'column',
   gap: '1rem',
   padding: '0 6rem 4rem 0',
-  '@media (max-width: 768px) ': {
+  '@media (max-width: 1439px)': {
     padding: '0 0 0 0',
   },
 })
@@ -46,13 +49,13 @@ export const HeaderTilesTitleText = styled('text', {
   fontWeight: '700',
   lineHeight: '110%',
   width: '610px',
-  '@media (max-width: 768px) ': {
+  '@media (max-width: 1439px)': {
     fontSize: '3.5rem',
     width: '550px',
     padding: '1rem 0 0 0',
   },
 
-  '@media (min-width: 375px) and (max-width: 768px)': {
+  '@media (min-width: 375px) and (max-width: 767px)': {
     fontSize: '2.5rem',
     width: '305px',
   },
@@ -67,10 +70,10 @@ export const ButtonContainer = styled('div', {
   display: 'flex',
   padding: '1.25rem 0 0 0',
   width: '60%',
-  '@media (max-width: 768px) ': {
+  '@media (max-width: 1439px)': {
     padding: '.20rem 0 0 0',
   },
-  '@media (min-width: 375px) and (max-width: 768px)': {
+  '@media (min-width: 375px) and (max-width: 767px)': {
     padding: '0 0 0 0',
     span: {
       fontSize: '0.7rem',
@@ -85,12 +88,12 @@ export const ContainerLogoTrailer = styled('div', {
   marginTop: '-2rem',
   gap: '10rem',
 
-  '@media (max-width: 768px) ': {
+  '@media (max-width: 1439px)': {
     marginLeft: '-11rem',
     marginTop: '-7rem',
     gap: '16rem',
   },
-  '@media (min-width: 375px) and (max-width: 768px)': { display: 'none' },
+  '@media (min-width: 375px) and (max-width: 767px)': { display: 'none' },
 })
 
 export const LogoContainer = styled('div', {
@@ -101,7 +104,7 @@ export const TrailerText = styled('text', {
   fontFamily: 'poppins',
   fontSize: '13px',
   fontWeight: '600',
-  '@media (max-width: 768px) ': {
+  '@media (max-width: 1439px)': {
     display: 'none',
   },
 })

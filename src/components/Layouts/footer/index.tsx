@@ -5,20 +5,15 @@ import {
   FooterHeader,
   FooterDownloadTextContainer,
   FooterDownloadText,
-  BackgroundGrid,
-  BackgroundInside,
   FooterDownloadTextContainerIcon,
   FooterMobileApplicationContainer,
   FooterMobileApplicationText,
   ButtonContainer,
   FooterTitle,
-  Teste,
 } from './style'
 
 import Image from 'next/image'
 import logoBattleNet from '../../../../public/logo-battle-net.png'
-import appImage from '../../../../public/ilustrations/app.png'
-import appImageMini from '../../../../public/ilustrations/app-mini.png'
 
 import { useEffect, useState } from 'react'
 import { BuyIcon } from '@/components/Icons/footer/BuyIcon'
@@ -28,6 +23,7 @@ import { CellphoneIcon } from '@/components/Icons/footer/CellphoneIcon'
 import { AppleIcon } from '@/components/Icons/ThirdPartyIcons/AppleIcon'
 import { WindowsIcon } from '@/components/Icons/ThirdPartyIcons/WindowsIcon'
 import { LinuxIcon } from '@/components/Icons/ThirdPartyIcons/LinuxIcon'
+import { ResponsiveImages } from '@/components/ResponsiveImages'
 
 export default function Footer() {
   const [os, setOs] = useState('')
@@ -104,15 +100,8 @@ export default function Footer() {
             </FooterMobileApplicationText>
           </FooterMobileApplicationContainer>
         </FooterContent>
-        {/* <Teste>
-          <BackgroundGrid>
-            <Image src={appImage} alt="" />
-          </BackgroundGrid>
-          <BackgroundInside>
-            <Image src={appImageMini} alt="" />
-          </BackgroundInside>
-        </Teste> */}
       </FooterHeader>
+      <ResponsiveImages />
     </FooterContainer>
   )
 }

@@ -7,20 +7,20 @@ export const ExclusiveGamesContainer = styled('div', {
   marginTop: '4rem',
 
   '@media (min-width: 1440px)': { marginTop: '1rem' },
-  '@media (max-width: 768px) ': {
+  '@media (max-width: 1439px)': {
     marginTop: '1rem',
   },
-  '@media (min-width: 375px) and (max-width: 768px)': { marginTop: '0.3rem' },
+  '@media (min-width: 375px) and (max-width: 767px)': { marginTop: '0.3rem' },
 })
 
 export const ExclusiveGamesHeader = styled('div', {
   maxWidth: '1200px',
   margin: '0 auto',
 
-  '@media (max-width: 768px) ': {
+  '@media (max-width: 1439px)': {
     maxWidth: '700px',
   },
-  '@media (min-width: 375px) and (max-width: 768px)': { maxWidth: '325px' },
+  '@media (min-width: 375px) and (max-width: 767px)': { maxWidth: '325px' },
 })
 
 export const ExclusiveGamesContent = styled('div', {
@@ -32,8 +32,8 @@ export const ExclusiveGamesFlexText = styled('div', {
   display: 'flex',
   gap: '12rem',
 
-  '@media (max-width: 768px) ': { gap: '4rem' },
-  '@media (min-width: 375px) and (max-width: 768px)': { gap: '1rem' },
+  '@media (max-width: 1439px)': { gap: '4rem' },
+  '@media (min-width: 375px) and (max-width: 767px)': { gap: '1rem' },
 })
 
 export const ExclusiveGamesText = styled('span', {
@@ -41,7 +41,7 @@ export const ExclusiveGamesText = styled('span', {
   fontWeight: '600',
 
   color: '$gray-300',
-  '@media (max-width: 768px) ': {
+  '@media (max-width: 1439px)': {
     display: 'none',
   },
 })
@@ -50,19 +50,22 @@ export const ExclusiveGamesTitleText = styled('div', {
   fontSize: '2rem',
   fontWeight: 'bold',
   lineHeight: '110%',
-  '@media (min-width: 375px) and (max-width: 768px)': { fontSize: '1.75rem' },
+  '@media (min-width: 375px) and (max-width: 767px)': { fontSize: '1.75rem' },
 })
 
 export const ExclusiveGamesIcons = styled('div', {
   display: 'flex',
   gap: '27rem',
   padding: '2rem 0 0 0',
-  '@media (min-width: 1440px)': { gap: '20rem', padding: '2rem 0 0 0' },
-  '@media (max-width: 768px) ': {
+  '@media (min-width: 1440px)': {
+    gap: '20rem',
+    padding: '2rem 0 0 0',
+  },
+  '@media (max-width: 1439px)': {
     gap: '8rem',
     padding: '2rem 0 0 2rem',
   },
-  '@media (min-width: 375px) and (max-width: 768px)': {
+  '@media (min-width: 375px) and (max-width: 767px)': {
     gap: '2rem',
     padding: '2rem 0 0 0',
   },
@@ -77,8 +80,10 @@ export const ExclusiveGridIcons = styled('div', {
     cursor: 'pointer',
   },
 
-  '@media (max-width: 768px) ': { width: '25%' },
-  '@media (min-width: 375px) and (max-width: 768px)': { display: 'none' },
+  '@media (max-width: 1439px)': {
+    width: '25%',
+  },
+  '@media (min-width: 375px) and (max-width: 767px)': { display: 'none' },
 })
 
 export const ExclusiveGamesAllGames = styled('div', {
@@ -107,12 +112,12 @@ export const ExclusiveGamesGrid = styled('div', {
   gridTemplateColumns: 'repeat(4, 1fr)',
   gap: '1.5rem',
 
-  '@media (max-width: 768px) ': {
+  '@media (max-width: 1439px)': {
     gridTemplateColumns: 'repeat(3, 1fr)',
     gap: '1.5rem',
   },
 
-  '@media (min-width: 375px) and (max-width: 768px)': {
+  '@media (min-width: 375px) and (max-width: 767px)': {
     gridTemplateColumns: 'repeat(2, 1fr)',
     gap: '0.875rem',
   },
@@ -138,11 +143,11 @@ export const ExclusiveGamesImageLogo = styled('div', {
   position: 'absolute',
   top: '250px',
   left: '67px',
-  '@media (max-width: 768px) ': {
+  '@media (max-width: 1439px)': {
     top: 180,
     left: 50,
   },
-  '@media (min-width: 375px) and (max-width: 768px)': { top: 150, left: 40 },
+  '@media (min-width: 375px) and (max-width: 767px)': { top: 150, left: 40 },
 })
 
 export const ExclusiveGamesGridText = styled('div', {
@@ -155,7 +160,7 @@ export const ExclusiveGamesGridTitle = styled('div', {
   fontWeight: '600',
   fontSize: '1.1875rem',
   fontFamily: 'poppins',
-  '@media (min-width: 375px) and (max-width: 768px)': { display: 'none' },
+  '@media (min-width: 375px) and (max-width: 767px)': { display: 'none' },
 })
 
 export const ExclusiveGamesGridSubtitle = styled('div', {
@@ -163,7 +168,7 @@ export const ExclusiveGamesGridSubtitle = styled('div', {
   fontFamily: 'poppins',
   color: '$white',
   opacity: 0.6,
-  '@media (min-width: 375px) and (max-width: 768px)': { display: 'none' },
+  '@media (min-width: 375px) and (max-width: 767px)': { display: 'none' },
 })
 
 export const ExclusiveGamesTileMoreGames = styled('div', {
@@ -177,12 +182,15 @@ export const ExclusiveGamesTileMoreGames = styled('div', {
   gap: '1rem',
   height: '414px',
 
-  '@media (min-width: 1440px)': { width: '17.9375rem', height: '24.5625rem' },
-  '@media (max-width: 768px) ': {
+  '@media (min-width: 1440px)': {
+    width: '17.9375rem',
+    height: '24.5625rem',
+  },
+  '@media (max-width: 1439px)': {
     width: '12.875rem',
     height: '17.5625rem',
   },
-  '@media (min-width: 375px) and (max-width: 768px)': {
+  '@media (min-width: 375px) and (max-width: 767px)': {
     width: '9.9375rem',
     height: '13.625rem',
   },
@@ -196,7 +204,7 @@ export const ExclusiveGamesTileMoreGamesIcon = styled('div', {
     filter: 'brightness(65%)',
     cursor: 'pointer',
   },
-  '@media (min-width: 375px) and (max-width: 768px)': { fontSize: '0.875rem' },
+  '@media (min-width: 375px) and (max-width: 767px)': { fontSize: '0.875rem' },
 })
 
 export const ExclusiveGamesTileMoreGamesText = styled('span', {
@@ -205,24 +213,30 @@ export const ExclusiveGamesTileMoreGamesText = styled('span', {
 })
 
 export const ExclusiveGamesTile = styled('img', {
-  '@media (min-width: 1440px)': { width: '17.9375rem', height: '24.5625rem' },
-  '@media (max-width: 768px) ': {
+  '@media (min-width: 1440px)': {
+    width: '17.9375rem',
+    height: '24.5625rem',
+  },
+  '@media (max-width: 1439px)': {
     width: '12.875rem',
     height: '17.5625rem',
   },
-  '@media (min-width: 375px) and (max-width: 768px)': {
+  '@media (min-width: 375px) and (max-width: 767px)': {
     width: '9.9375rem',
     height: '13.625rem',
   },
 })
 
 export const ExclusiveGamesTileIcon = styled('img', {
-  '@media (min-width: 1440px)': { width: '9.25rem', height: '6.125rem' },
-  '@media (max-width: 768px) ': {
+  '@media (min-width: 1440px)': {
+    width: '9.25rem',
+    height: '6.125rem',
+  },
+  '@media (max-width: 1439px)': {
     width: '6.625rem',
     height: '4.375rem',
   },
-  '@media (min-width: 375px) and (max-width: 768px)': {
+  '@media (min-width: 375px) and (max-width: 767px)': {
     width: '5.125rem',
     height: '3.375rem',
   },

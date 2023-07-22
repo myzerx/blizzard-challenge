@@ -61,11 +61,11 @@ export const HeaderContent = styled('div', {
     columnGap: '6.5rem',
   },
 
-  '@media (max-width: 768px) ': {
+  '@media (max-width: 1439px)': {
     maxWidth: '600px',
   },
 
-  '@media (min-width: 375px) and (max-width: 768px)': { maxWidth: '325px' },
+  '@media (min-width: 375px) and (max-width: 767px)': { maxWidth: '325px' },
 })
 
 export const HeaderTabs = styled('nav', {
@@ -73,7 +73,7 @@ export const HeaderTabs = styled('nav', {
   alignItems: 'center',
   columnGap: '3rem',
   flex: 1,
-  '@media (max-width: 768px) ': {
+  '@media (max-width: 1439px)': {
     display: 'none',
   },
 })
@@ -104,7 +104,7 @@ export const ButtonContainer = styled('div', {
   display: 'flex',
   flexDirection: 'row',
   gap: '1rem',
-  '@media (min-width: 375px) and (max-width: 768px)': { display: 'none' },
+  '@media (min-width: 375px) and (max-width: 767px)': { display: 'none' },
 })
 
 export const ButtonsText = styled('text', {

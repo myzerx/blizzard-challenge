@@ -8,10 +8,10 @@ export const FooterHeader = styled('div', {
   minHeight: '830px',
   margin: '0 auto',
 
-  '@media (max-width: 768px) ': {
+  '@media (max-width: 1439px)': {
     maxWidth: '700px',
   },
-  '@media (min-width: 375px) and (max-width: 768px)': { maxWidth: '325px' },
+  '@media (min-width: 375px) and (max-width: 767px)': { maxWidth: '325px' },
 })
 
 export const FooterContent = styled('div', {
@@ -67,16 +67,4 @@ export const FooterMobileApplicationText = styled('span', {
   fontFamily: 'poppins',
   fontSize: '0.875rem',
   lineHeight: '120%',
-})
-
-export const Teste = styled('div', {
-  position: 'sticky',
-})
-
-export const BackgroundGrid = styled('div', {})
-
-export const BackgroundInside = styled('div', {
-  position: 'absolute',
-  top: '20rem',
-  left: '13rem',
 })
