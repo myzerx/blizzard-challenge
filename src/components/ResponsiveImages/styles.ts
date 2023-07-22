@@ -11,7 +11,7 @@ export const ImageOne = styled('img', {
   width: '1053px',
   height: '609.84px',
 
-  '@media (min-width: 2560px) ': {
+  '@media (min-width: 2490px) ': {
     margin: '-750px 0 0 1200px',
   },
 
@@ -45,7 +45,7 @@ export const ImageTwo = styled('img', {
   margin: '-450px 0 0 930px',
   maxWidth: '550px',
 
-  '@media (min-width: 2560px) ': {
+  '@media (min-width: 2490px) ': {
     margin: '-450px 0 0 1390px',
   },
 
